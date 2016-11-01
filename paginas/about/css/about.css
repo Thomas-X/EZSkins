@@ -1,3 +1,9 @@
-.something {
-    background-color:white;
+body {
+    margin:0;
+    background-color: #161619;
+}
+
+.wrapper {
+    width:75%;
+    margin:auto;
 }

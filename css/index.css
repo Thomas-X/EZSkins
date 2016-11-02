@@ -4,71 +4,68 @@
 
 @keyframes slider {
     0% {
-        left: 0%;
+        left:0%;
     }
     10% {
-        left: 0%;
+        left:0%;
     }
     16% {
-        left: -100%;
+        left:-100%;
     }
     26% {
-        left: -100%;
+        left:-100%;
     }
     32% {
-        left: -200%;
+        left:-200%;
     }
     42% {
-        left: -200%;
+        left:-200%;
     }
     48% {
-        left: -300%;
+        left:-300%;
     }
     58% {
-        left: -300%;
+        left:-300%;
     }
     64% {
-        left: -400%;
+        left:-400%;
     }
     74% {
-        left: -400%;
+        left:-400%;
     }
     80% {
-        left: -500%;
+        left:-500%;
     }
     90% {
-        left: -500%;
+        left:-500%;
     }
     96% {
-        left: -600%;
+        left:-600%;
     }
     100% {
-        left: -600%;
+        left:-600%;
     }
 
 }
-
 .slider {
-    overflow: hidden;
-    width: 50%;
-    height: 200px;
-    text-align: center;
+    overflow:hidden;
+    width:50%;
+    height:200px;
+    text-align:center;
 
 }
-
 .slider figure img {
-    width: 14.28%;
-    float: left;
-    height: 200px;
+    width:14.28%;
+    float:left;
+    height:200px;
 
 }
-
 .slider figure {
-    position: relative;
-    width: 700%;
-    margin: 0;
-    left: 0;
-    animation: 20s slider infinite;
+    position:relative;
+    width:700%;
+    margin:0;
+    left:0;
+    animation:20s slider infinite;
 }
 
 body {
@@ -77,11 +74,10 @@ body {
 
 #button {
     transition: 300ms;
-    color: #161619;
-    transform: translateY(-120%);
+    color:#161619;
+    transform:translateY(-120%);
 
 }
-
 #button:hover {
     transition: 300ms;
     background-color: rgb(255, 0, 0);
@@ -111,6 +107,38 @@ body {
 }
 
 .nav {
+    height:75px;
+    background-color: #222329;
+}
+#nav-toggle {
+    align-self:center;
+    padding-top:75px;
+}
+.nav-toggle span {
+    transition:300ms;
+    background-color:white;
+}
+.nav-toggle:hover span {
+    transition:300ms;
+    background-color:black;
+}
+.nav-toggle.is-active:hover span {
+    transition:300ms;
+    background-color:black;
+}
+.nav-toggle:hover {
+    transition:300ms;
+    background-color:whitesmoke;
+}
+.nav-toggle.is-active span {
+    transition:300ms;
+    background-color:whitesmoke;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        background-color:#222329;
+    }
     height: 75px;
 }
 

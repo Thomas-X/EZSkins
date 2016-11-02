@@ -6,6 +6,24 @@
     <link rel="stylesheet" href="css/bulma.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/font-awesome.css">
+
+    <script>
+        var toggle = 1
+        function togglefunction() {
+            if(toggle == 1) {
+                document.getElementById("nav-toggle").className = "nav-toggle is-active";
+                document.getElementById("nav-menu").className = "nav-right nav-menu is-active";
+                toggle = 0;
+            }
+            else {
+                document.getElementById("nav-toggle").className = "nav-toggle";
+                document.getElementById("nav-menu").className = "nav-right nav-menu";
+                toggle = 1;
+            }
+        }
+    </script>
+
+
 </head>
 <body>
 <nav class="nav">
@@ -23,13 +41,15 @@
         </a>
     </div>
 
-    <span class="nav-toggle is-active">
-        <span></span>
-        <span></span>
-        <span></span>
+    <span id="nav-toggle" class="nav-toggle" onclick="togglefunction()">
+        <span id="spans"></span>
+        <span id="spans"></span>
+        <span id="spans"></span>
     </span>
 
-    <div id="navcolor" class="nav-right nav-menu is-active" style="padding-right: 20px;">
+
+
+    <div id="nav-menu" class="nav-right nav-menu" style="padding-right: 20px;">
         <a id="navitemcolor" class="nav-item" href="#">
             Home
         </a>

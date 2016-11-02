@@ -67,12 +67,19 @@
     left:0;
     animation:20s slider infinite;
 }
+
+body {
+    background-color: #161619;
+}
+
 #button {
+    transition: 300ms;
     color:#161619;
     transform:translateY(-120%);
 
 }
 #button:hover {
+    transition: 300ms;
     background-color: rgb(255, 0, 0);
 }
 
@@ -97,4 +104,8 @@
 #navitemcolor:hover {
     transition: 300ms;
     color: red;
+}
+
+.nav {
+    height:75px;
 }

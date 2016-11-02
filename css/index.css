@@ -75,3 +75,26 @@
 #button:hover {
     background-color: rgb(255, 0, 0);
 }
+
+#navcolor {
+    background-color: #222329;
+}
+
+#githubicon {
+    transition: 300ms;
+}
+
+#githubicon:hover {
+    transition: 300ms;
+    color: #a2a3a0;
+}
+
+#navitemcolor {
+    transition: 300ms;
+    color: white;
+}
+
+#navitemcolor:hover {
+    transition: 300ms;
+    color: red;
+}

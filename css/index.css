@@ -108,4 +108,35 @@ body {
 
 .nav {
     height:75px;
+    background-color: #222329;
+}
+#nav-toggle {
+    align-self:center;
+    padding-top:75px;
+}
+.nav-toggle span {
+    transition:300ms;
+    background-color:white;
+}
+.nav-toggle:hover span {
+    transition:300ms;
+    background-color:black;
+}
+.nav-toggle.is-active:hover span {
+    transition:300ms;
+    background-color:black;
+}
+.nav-toggle:hover {
+    transition:300ms;
+    background-color:whitesmoke;
+}
+.nav-toggle.is-active span {
+    transition:300ms;
+    background-color:whitesmoke;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        background-color:#222329;
+    }
 }

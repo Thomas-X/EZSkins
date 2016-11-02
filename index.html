@@ -10,7 +10,7 @@
     <script>
         var toggle = 1
         function togglefunction() {
-            if(toggle == 1) {
+            if (toggle == 1) {
                 document.getElementById("nav-toggle").className = "nav-toggle is-active";
                 document.getElementById("nav-menu").className = "nav-right nav-menu is-active";
                 toggle = 0;
@@ -48,16 +48,15 @@
     </span>
 
 
-
     <div id="nav-menu" class="nav-right nav-menu" style="padding-right: 20px;">
-        <a id="navitemcolor" class="nav-item" href="#">
-            Home
-        </a>
         <a id="navitemcolor" class="nav-item" href="#">
             Shop
         </a>
-        <a id="navitemcolor" class="nav-item" href="#">
+        <a id="navitemcolor" class="nav-item" href="pages/news/news.html">
             News
+        </a>
+        <a id="navitemcolor" class="nav-item" href="pages/about/about.html">
+            About
         </a>
         <a id="navitemcolor" class="nav-item" href="#">
             FAQ
@@ -69,6 +68,7 @@
 
     </div>
 </nav>
+
 
 <div class="slider">
     <figure>
@@ -82,7 +82,96 @@
     </figure>
     <a id="button" class="button is-danger is-medium">BUY NOW!1!1!!</a>
 </div>
+<div class="randombalk"> <!-- random balk onder de slider -->
+    <br><br>
+</div> <!-- end of the random balk -->
 
+<div id="uberbox">
+    <div class="box"> <!-- 1e echte customers review -->
+        <article class="media">
+            <div class="media-left">
+                <figure class="image is-64x64">
+                    <img src="img/reviews/janjaan.png" alt="Image">
+                </figure>
+            </div>
+            <div class="media-content">
+                <div class="content">
+                    <p>
+                        <strong>Jan Jaap Siebers</strong>
+                        <small>@YoyoSiebers</small>
+                        <small>31m</small>
+                        <br>
+                        Yo gabbers je mattie Siebers hierzo. Vette website. Ik heb gister hierzo goedkope skinna's
+                        gekocht G! Echt een aanrader!
+                    </p>
+                </div>
+                <nav class="level">
+                    <div class="level-left">
+                        <a class="level-item">
+                            <span class="icon is-small"><i class="fa fa-reply"></i></span>
+                        </a>
+                        <a class="level-item">
+                            <span class="icon is-small"><i class="fa fa-retweet"></i></span>
+                        </a>
+                        <a class="level-item">
+                            <span class="icon is-small"><i class="fa fa-heart"></i></span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </article>
+    </div> <!-- 1e echte customers review end -->
+    <div class="box"> <!-- 2e echte customers review -->
+        <article class="media">
+            <div class="media-left">
+                <figure class="image is-64x64">
+                    <img src="img/reviews/pietje.jpg" alt="Image">
+                </figure>
+            </div>
+            <div class="media-content">
+                <div class="content">
+                    <p>
+                        <strong>Piet de Vries</strong>
+                        <small>@JeMannetjePiet</small>
+                        <small>5m</small>
+                        <br>
+                        Idd @YoyoSiebers deze site is <strong>DOPE</strong>. Echt gare shit ouwe. Ik heb al 3 dragon
+                        lores gekocht voor m'n kinderen.
+                        Alleen ze zijn helaas wel Factory New.
+                    </p>
+                </div>
+                <nav class="level">
+                    <div class="level-left">
+                        <a class="level-item">
+                            <span class="icon is-small"><i class="fa fa-reply"></i></span>
+                        </a>
+                        <a class="level-item">
+                            <span class="icon is-small"><i class="fa fa-retweet"></i></span>
+                        </a>
+                        <a class="level-item">
+                            <span class="icon is-small"><i class="fa fa-heart"></i></span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </article>
+    </div> <!-- 2e echte customers review end -->
+</div>
 
+<hr>
+<footer class="footer">
+    <div class="container">
+        <div class="content has-text-centered">
+            <p>
+                <strong>EZSkins</strong> by Thomas Zwarts & Barry Willems.
+            </p>
+            <p>
+                <a class="icon" href="https://github.com/Thomas-X/EZSkins">
+                    <i class="fa fa-github"></i>
+                </a>
+            </p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

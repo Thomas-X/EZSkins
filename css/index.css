@@ -1,5 +1,4 @@
 .img1, .img2, .img3, .img4 {
-    transition: all 20s;
 }
 
 @keyframes slider {

@@ -50,17 +50,16 @@
 
 .slider {
     overflow: hidden;
-    width: 50%;
-    height: 500px;
+    width: 100%;
+    height: 600px;
     text-align: center;
-    margin: auto;
 
 }
 
 .slider figure img {
     width: 14.28%;
     float: left;
-    height: 500px;
+    height: 600px;
 
 }
 
@@ -115,11 +114,13 @@ body {
 #navitemcolor {
     transition: 300ms;
     color: white;
+    border-bottom:none;
 }
 
 #navitemcolor:hover {
     transition: 300ms;
     color: red;
+    border-bottom:2px red solid;
 }
 
 .nav {
@@ -189,6 +190,7 @@ body {
     margin: auto;
     justify-content: center;
     width: 65%;
+    flex-wrap:wrap;
 }
 
 /*FOOTER */
@@ -212,6 +214,9 @@ body {
     transition: 300ms;
     color: #a2a3a0 !important;
 }
+#footertekst {
+    color:#fffbeb;
+}
 
 .footer a {
     border-bottom-color: transparent !important;
@@ -230,4 +235,7 @@ hr {
 
 .box {
     margin:20px;
+}
+#balk {
+    background-color:#222329;
 }

@@ -1,0 +1,41 @@
+.wrapper {
+    width:65%;
+    margin:auto;
+}
+
+body {
+    background-color:#161619;
+}
+.content p, .content h1, .content strong {
+    color:#fffbeb !important;
+}
+.container {
+    text-align:center;
+}
+/*FOOTER */
+.footer {
+    background-color: #161619;
+    color: #fffbeb;
+    border-bottom-color: transparent;
+}
+
+.footer strong {
+    color: #fffbeb;
+}
+
+.footer i {
+    transition: 300ms;
+    color: #fffbeb;
+
+}
+
+.footer i:hover {
+    transition: 300ms;
+    color: #a2a3a0 !important;
+}
+
+.footer a {
+    border-bottom-color: transparent !important;
+}
+
+/*FOOTER*/

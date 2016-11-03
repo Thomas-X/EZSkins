@@ -240,6 +240,10 @@ body {
 }
 
 /*FOOTER*/
+
+#redline {
+    border-top: 2px solid #EE424B;
+}
 hr {
     background-color: #dbdbdb;
     border: none;
@@ -249,13 +253,9 @@ hr {
     width:65%;
     margin:auto;
 }
-
 .box {
     margin:20px;
 }
 #balk {
     background-color:#222329;
-}
-#redline {
-    border-top: 2px solid #EE424B;
 }

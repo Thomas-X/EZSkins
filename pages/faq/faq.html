@@ -7,12 +7,54 @@
     <link rel="stylesheet" href="css/faq.css"/>
     <link rel="stylesheet" href="../../css/bulma.css"/>
     <link rel="stylesheet" href="../../css/font-awesome.css"/>
+    <script src="../../js/toggleNav.js"></script>
 </head>
 <body>
 
-<div id="nav">
-</div>
+<nav class="nav">
+    <div id="navcolor" class="nav-left">
+        <a class="nav-item is-brand" href="#">
+            <img id="logoezskins" src="../../logo/logo.png" alt="EZSkins logo">
+        </a>
+    </div>
 
+    <div id="navcolor" class="nav-center">
+        <a class="nav-item" href="https://github.com/Thomas-X/EZSkins" target="_blank">
+      <span class="icon">
+        <i id="githubicon" class="fa fa-github fa-inverse"></i>
+      </span>
+        </a>
+    </div>
+
+    <span id="nav-toggle" class="nav-toggle" onclick="togglefunction()">
+        <span id="spans"></span>
+        <span id="spans"></span>
+        <span id="spans"></span>
+    </span>
+
+
+    <div id="nav-menu" class="nav-right nav-menu" style="padding-right: 20px;background-color:#222329">
+        <a id="navitemcolor1" class="nav-item is-noactive" href="../webshop/index.html">
+            Shop
+        </a>
+        <a id="navitemcolor2" class="nav-item is-noactive" href="../news/news.html">
+            News
+        </a>
+        <a id="navitemcolor3" class="nav-item is-noactive" href="../about/about.html">
+            About
+        </a>
+        <a id="navitemcolor4" class="nav-item is-noactive" href="../faq/faq.html">
+            FAQ
+        </a>
+        <a id="navitemcolor5" class="nav-item is-noactive" href=".../contact/contact.html">
+            Contact
+        </a>
+
+
+    </div>
+</nav>
+<div id="redline"> <!-- rood balkje onder nav -->
+</div>
 <div class="wrapper">
     <div class="content">
         <br>

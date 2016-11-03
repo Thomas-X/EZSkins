@@ -3,12 +3,6 @@ body {
     background-color: #161619;
 }
 
-#nav {
-    width: 100%;
-    height: 86px;
-    background-color: green;
-}
-
 .wrapper {
     width: 65%;
     margin: auto;
@@ -37,8 +31,121 @@ iframe {
     height:300px;
 }
 
+#navcolor {
+    background-color: #222329;
+}
+
+#githubicon {
+    transition: 300ms;
+}
+
+#githubicon:hover {
+    transition: 300ms;
+    color: #EE424B;
+}
+
+
+.nav-item.is-noactive {
+    transition: 300ms;
+    color: #fffbeb;
+    border-bottom:none ;
+}
+.nav-item.is-noactive:hover {
+    transition: 300ms;
+    color:#EE424B;
+    border-bottom:2px #EE424B solid;
+}
+.nav-item.is-yesactive {
+    transition: 300ms;
+    color: #fffbeb;
+    border-bottom:none;
+}
+.nav-item.is-yesactive:hover {
+    transition: 300ms;
+    color:#EE424B !important;
+    border-bottom:none;
+}
+@media screen and (min-width:768px) {
+    .nav-item.is-yesactive {
+        border-bottom:none !important;
+    }
+    .nav-item.is-yesactive:hover {
+        border-bottom: 2px #EE424B solid !important;
+    }
+}
+
+.nav {
+    height: 75px;
+    background-color: #222329;
+}
+
+#nav-toggle {
+    align-self: center;
+    padding-top: 75px;
+}
+
+.nav-toggle span {
+    transition: 300ms;
+    background-color: white;
+}
+
+.nav-toggle:hover span {
+    transition: 300ms;
+    background-color: black;
+}
+
+.nav-toggle.is-active:hover span {
+    transition: 300ms;
+    background-color: black;
+}
+
+.nav-toggle:hover {
+    transition: 300ms;
+    background-color: whitesmoke;
+}
+
+.nav-toggle.is-active span {
+    transition: 300ms;
+    background-color: whitesmoke;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        background-color: #222329;
+    }
+
+}
+
+#logoezskins {
+    width: 144px;
+    height: 51px;
+}
+
+.nav-item img {
+    max-height: 51px !important;
+}
+
+.randombalk {
+    background-color: #222329;
+}
+
+.box {
+    width: 40%;
+    margin: auto;
+    margin-top: 25px;
+    display: inline-block;
+}
+
+#uberbox {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    width: 65%;
+    flex-wrap:wrap;
+}
+
 /*FOOTER */
-.footer.footer {
+.footer {
     background-color: #161619;
     color: #fffbeb;
     border-bottom-color: transparent;
@@ -56,7 +163,10 @@ iframe {
 
 .footer i:hover {
     transition: 300ms;
-    color: #a2a3a0 !important;
+    color: #EE424B !important;
+}
+#footertekst {
+    color:#fffbeb;
 }
 
 .footer a {
@@ -64,3 +174,7 @@ iframe {
 }
 
 /*FOOTER*/
+
+#redline {
+    border-top: 2px solid #EE424B;
+}

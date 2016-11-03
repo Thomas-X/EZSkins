@@ -8,11 +8,13 @@ body {
     margin: auto;
     height: auto;
 }
+#githubicon {
+    transition: 300ms;
+}
 
-#nav {
-    width: 100%;
-    height: 86px;
-    background-color: green;
+#githubicon:hover {
+    transition: 300ms;
+    color: #EE424B;
 }
 
 hr {
@@ -51,7 +53,7 @@ hr {
 
 .footer i:hover {
     transition: 300ms;
-    color: #a2a3a0 !important;
+    color: #EE424B !important;
 }
 
 .footer a {
@@ -59,3 +61,93 @@ hr {
 }
 
 /*FOOTER*/
+
+#redline {
+    border-top: 2px solid #EE424B;
+}
+
+
+#navcolor {
+    background-color: #222329;
+}
+
+.nav-item.is-noactive {
+    transition: 300ms;
+    color: #fffbeb;
+    border-bottom:none ;
+}
+.nav-item.is-noactive:hover {
+    transition: 300ms;
+    color:#EE424B;
+    border-bottom:2px #EE424B solid;
+}
+.nav-item.is-yesactive {
+    transition: 300ms;
+    color: #fffbeb;
+    border-bottom:none;
+}
+.nav-item.is-yesactive:hover {
+    transition: 300ms;
+    color:#EE424B !important;
+    border-bottom:none;
+}
+@media screen and (min-width:768px) {
+    .nav-item.is-yesactive {
+        border-bottom:none !important;
+    }
+    .nav-item.is-yesactive:hover {
+        border-bottom: 2px #EE424B solid !important;
+    }
+}
+
+.nav {
+    height: 75px;
+    background-color: #222329;
+}
+
+#nav-toggle {
+    align-self: center;
+    padding-top: 75px;
+   background-color:#222329;
+}
+
+.nav-toggle span {
+    transition: 300ms;
+    background-color: white;
+}
+
+.nav-toggle:hover span {
+    transition: 300ms;
+    background-color: black;
+}
+
+.nav-toggle.is-active:hover span {
+    transition: 300ms;
+    background-color: black;
+}
+
+.nav-toggle:hover {
+    transition: 300ms;
+    background-color: whitesmoke;
+}
+
+.nav-toggle.is-active span {
+    transition: 300ms;
+    background-color: whitesmoke;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        background-color: #222329;
+    }
+
+}
+
+#logoezskins {
+    width: 144px;
+    height: 51px;
+}
+
+.nav-item img {
+    max-height: 51px !important;
+}

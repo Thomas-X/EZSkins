@@ -229,3 +229,63 @@ body {
     transition: 300ms;
     color: #EE424B !important;
 }
+
+
+/* PRE LOADER */
+
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 0.85s;
+    animation-name: animatebottom;
+    animation-duration: 0.85s;
+    background-color:#161619;
+}
+
+@-webkit-keyframes animatebottom {
+    from { bottom:-50px; opacity:0 }
+    to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+    from{ bottom:-50px; opacity:0 }
+    to{ bottom:0; opacity:1 }
+}
+
+
+
+
+.loader2 {
+    /*display:block;*/
+    transition:300ms;
+    opacity:1;
+
+    width:100%;
+    height:100%;
+    background-color:#222329;
+}
+
+.page {
+    display:none;
+}
+.quickSpin {
+    -webkit-animation: fa-spin 1s infinite ease-in-out;
+    animation: fa-spin 1s infinite ease-in-out;
+}
+#hover {
+    transition:300ms;
+}
+
+.nav-menu a {[«
+}
+#hover:hover{
+    transition:300ms;
+    color:#EE424B;
+}
+/* END PRE LOADER */
+html {
+    height:100%;
+}
+body {
+    height:100%;
+}

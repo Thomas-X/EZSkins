@@ -6,17 +6,17 @@
 body {
     background-color:#161619;
 }
-.content p, .content h1, .content strong {
+.content p, .content h1, .content strong, .content h2 , .content a{
     color:#fffbeb !important;
+    border-bottom:none !important;
 }
 .container {
     text-align:center;
 }
-
 /*FOOTER */
-.footer.footer {
-    background-color: #161619;
-    color: #fffbeb;
+.footer {
+    background-color: #161619 !important;
+    /*color: #fffbeb;*/
     border-bottom-color: transparent;
 }
 

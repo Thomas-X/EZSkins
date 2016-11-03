@@ -6,24 +6,7 @@
     <link rel="stylesheet" href="css/bulma.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/font-awesome.css">
-
-    <script>
-        var toggle = 1
-        function togglefunction() {
-            if (toggle == 1) {
-                document.getElementById("nav-toggle").className = "nav-toggle is-active";
-                document.getElementById("nav-menu").className = "nav-right nav-menu is-active";
-                toggle = 0;
-            }
-            else {
-                document.getElementById("nav-toggle").className = "nav-toggle";
-                document.getElementById("nav-menu").className = "nav-right nav-menu";
-                toggle = 1;
-            }
-        }
-    </script>
-
-
+    <script src="js/toggleNav.js"></script>
 </head>
 <body>
 <nav class="nav">
@@ -49,26 +32,27 @@
 
 
     <div id="nav-menu" class="nav-right nav-menu" style="padding-right: 20px;">
-        <a id="navitemcolor" class="nav-item" href="pages/webshop/index.html">
+        <a id="navitemcolor1" class="nav-item is-noactive" href="pages/webshop/index.html">
             Shop
         </a>
-        <a id="navitemcolor" class="nav-item" href="pages/news/news.html">
+        <a id="navitemcolor2" class="nav-item is-noactive" href="pages/news/news.html">
             News
         </a>
-        <a id="navitemcolor" class="nav-item" href="pages/about/about.html">
+        <a id="navitemcolor3" class="nav-item is-noactive" href="pages/about/about.html">
             About
         </a>
-        <a id="navitemcolor" class="nav-item" href="pages/faq/faq.html">
+        <a id="navitemcolor4" class="nav-item is-noactive" href="pages/faq/faq.html">
             FAQ
         </a>
-        <a id="navitemcolor" class="nav-item" href="pages/contact/contact.html">
+        <a id="navitemcolor5" class="nav-item is-noactive" href="pages/contact/contact.html">
             Contact
         </a>
 
 
     </div>
 </nav>
-
+<div id="redline"> <!-- rood balkje onder nav -->
+</div>
 
 <div class="slider">
     <figure>
@@ -82,12 +66,6 @@
     </figure>
     <a id="button" onclick="" class="button is-danger is-medium"><strong>BUY NOW</strong></a>
 </div>
-
-<script>
-    function
-
-
-</script>
 
 
 <section id="balk" class="hero is-primary">

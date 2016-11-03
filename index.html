@@ -7,244 +7,268 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/font-awesome.css">
     <script src="js/toggleNav.js"></script>
+    <script src="js/loadFunc.js"></script>
 </head>
-<body>
-<nav class="nav">
-    <div id="navcolor" class="nav-left">
-        <a class="nav-item is-brand" href="#">
-            <img id="logoezskins" src="logo/logo.png" alt="EZSkins logo">
-        </a>
-    </div>
+<div id="loaderawesomeness" class="loader2" style="display:flex; justify-content: center;transition:300ms;">
 
-    <div id="navcolor" class="nav-center">
-        <a class="nav-item" href="https://github.com/Thomas-X/EZSkins" target="_blank">
+
+    <span class="fa-stack fa-lg" style="align-self:center;">
+        <i class="fa fa-circle-o-notch quickSpin fa-3x fa-fw fa-stack-2x fa-inverse"></i>
+        <i id="hover" class="fa fa-github fa-inverse fa-stack-1x"></i>
+    </span>
+
+
+
+</div>
+
+<body onload="loadFunc()">
+
+<div id="page" style="display:none;">
+
+
+    <nav class="nav">
+        <div id="navcolor" class="nav-left">
+            <a class="nav-item is-brand" href="#">
+                <img id="logoezskins" src="logo/logo.png" alt="EZSkins logo">
+            </a>
+        </div>
+
+        <div id="navcolor" class="nav-center">
+            <a class="nav-item" href="https://github.com/Thomas-X/EZSkins" target="_blank">
       <span class="icon">
         <i id="githubicon" class="fa fa-github fa-inverse"></i>
       </span>
-        </a>
-    </div>
+            </a>
+        </div>
 
-    <span id="nav-toggle" class="nav-toggle" onclick="togglefunction()">
+        <span id="nav-toggle" class="nav-toggle" onclick="togglefunction()">
         <span id="spans"></span>
         <span id="spans"></span>
         <span id="spans"></span>
     </span>
 
 
-    <div id="nav-menu" class="nav-right nav-menu" style="padding-right: 20px;">
-        <a id="navitemcolor1" class="nav-item is-noactive" href="pages/webshop/index.html">
-            Shop
-        </a>
-        <a id="navitemcolor2" class="nav-item is-noactive" href="pages/news/news.html">
-            News
-        </a>
-        <a id="navitemcolor3" class="nav-item is-noactive" href="pages/about/about.html">
-            About
-        </a>
-        <a id="navitemcolor4" class="nav-item is-noactive" href="pages/faq/faq.html">
-            FAQ
-        </a>
-        <a id="navitemcolor5" class="nav-item is-noactive" href="pages/contact/contact.html">
-            Contact
-        </a>
+        <div id="nav-menu" class="nav-right nav-menu" style="padding-right: 20px;">
+            <a id="navitemcolor1" class="nav-item is-noactive" href="pages/webshop/index.html">
+                Shop
+            </a>
+            <a id="navitemcolor2" class="nav-item is-noactive" href="pages/news/news.html">
+                News
+            </a>
+            <a id="navitemcolor3" class="nav-item is-noactive" href="pages/about/about.html">
+                About
+            </a>
+            <a id="navitemcolor4" class="nav-item is-noactive" href="pages/faq/faq.html">
+                FAQ
+            </a>
+            <a id="navitemcolor5" class="nav-item is-noactive" href="pages/contact/contact.html">
+                Contact
+            </a>
 
 
-    </div>
-</nav>
-<div id="redline"> <!-- rood balkje onder nav -->
-</div>
-
-<div class="slider">
-    <figure>
-        <img class="img1" src="img/slider/cyrex.png">
-        <img class="img2" src="img/slider/dragonking.png">
-        <img class="img3" src="img/slider/dragonlore.png">
-        <img class="img4" src="img/slider/fireserpent.png">
-        <img class="img5" src="img/slider/howl.png">
-        <img class="img6" src="img/slider/vulcan.png">
-        <img class="img7" src="img/slider/cyrex.png">
-    </figure>
-    <a id="button" onclick="" class="button is-danger is-medium"><strong>BUY NOW</strong></a>
-</div>
-
-
-<section id="balk" class="hero is-primary">
-    <div id="balk" class="hero-body">
-        <div id="balk" class="container has-text-centered">
-            <h1 class="title">
-                Customer Reviews
-            </h1>
-            <h2 class="subtitle">
-                <i>By our most loyal customers to date</i>
-            </h2>
         </div>
+    </nav>
+    <div id="redline"> <!-- rood balkje onder nav -->
     </div>
-</section>
-
-
-<!--<div class="randombalk"> &lt;!&ndash; random balk onder de slider &ndash;&gt;-->
-<!--<br><br>-->
-<!--</div> &lt;!&ndash; end of the random balk &ndash;&gt;-->
-
-<div id="uberbox">
-    <div class="box"> <!-- 1e echte customers review -->
-        <article class="media">
-            <div class="media-left">
-                <figure class="image is-64x64">
-                    <img src="img/reviews/janjaan.png" alt="Image">
-                </figure>
-            </div>
-            <div class="media-content">
-                <div class="content">
-                    <p>
-                        <strong>Jan Jaap Siebers</strong>
-                        <small>@YoyoSiebers</small>
-                        <small>31m</small>
-                        <br>
-                        Yo gabbers je mattie Siebers hierzo. Vette website. Ik heb gister hierzo goedkope skinna's
-                        gekocht G! Echt een aanrader!
-                    </p>
-                </div>
-                <nav class="level">
-                    <div class="level-left">
-                        <a class="level-item">
-                            <span class="icon is-small"><i class="fa fa-reply"></i></span>
-                        </a>
-                        <a class="level-item">
-                            <span class="icon is-small"><i class="fa fa-retweet"></i></span>
-                        </a>
-                        <a class="level-item">
-                            <span class="icon is-small"><i class="fa fa-heart"></i></span>
-                        </a>
-                    </div>
-                </nav>
-            </div>
-        </article>
-    </div> <!-- 1e echte customers review end -->
-    <div class="box"> <!-- 2e echte customers review -->
-        <article class="media">
-            <div class="media-left">
-                <figure class="image is-64x64">
-                    <img src="img/reviews/pietje.jpg" alt="Image">
-                </figure>
-            </div>
-            <div class="media-content">
-                <div class="content">
-                    <p>
-                        <strong>Piet de Vries</strong>
-                        <small>@JeMannetjePiet</small>
-                        <small>5m</small>
-                        <br>
-                        Hello my name is Piet I saw this website on <a>https://www.csgobets-noscam.org/really-noscam/</a>. And
-                        it's true there is no scam. I like it!
-
-                    </p>
-                </div>
-                <nav class="level">
-                    <div class="level-left">
-                        <a class="level-item">
-                            <span class="icon is-small"><i class="fa fa-reply"></i></span>
-                        </a>
-                        <a class="level-item">
-                            <span class="icon is-small"><i class="fa fa-retweet"></i></span>
-                        </a>
-                        <a class="level-item">
-                            <span class="icon is-small"><i class="fa fa-heart"></i></span>
-                        </a>
-                    </div>
-                </nav>
-            </div>
-        </article>
-    </div> <!-- 2e echte customers review end -->
-
-    <!--SECOND ROW-->
-    <div class="box"> <!-- 3e echte customers review -->
-        <article class="media">
-            <div class="media-left">
-                <figure class="image is-64x64">
-                    <img src="img/reviews/ton.png" alt="Image">
-                </figure>
-            </div>
-            <div class="media-content">
-                <div class="content">
-                    <p>
-                        <strong>Ton van Beuningen</strong>
-                        <small>@TonnieBoi</small>
-                        <small>54m</small>
-                        <br>
-                        Yo ene <a style="color: #00d1b2;">@YoyoSiebers</a> zei dat deze site D0pe was. Ik heb meteen al
-                        m'n geld op de site gezet en 50 gut knife safari mesh gekocht.
-                    </p>
-                </div>
-                <nav class="level">
-                    <div class="level-left">
-                        <a class="level-item">
-                            <span class="icon is-small"><i class="fa fa-reply"></i></span>
-                        </a>
-                        <a class="level-item">
-                            <span class="icon is-small"><i class="fa fa-retweet"></i></span>
-                        </a>
-                        <a class="level-item">
-                            <span class="icon is-small"><i class="fa fa-heart"></i></span>
-                        </a>
-                    </div>
-                </nav>
-            </div>
-        </article>
-    </div> <!-- 3e echte customers review end -->
-    <div class="box"> <!-- 4e echte customers review -->
-        <article class="media">
-            <div class="media-left">
-                <figure class="image is-64x64">
-                    <img src="img/reviews/job.jpg" alt="Image">
-                </figure>
-            </div>
-            <div class="media-content">
-                <div class="content">
-                    <p>
-                        <strong>Job Jaap Siebers</strong>
-                        <small>@PatatjeJopJaap</small>
-                        <small>48m</small>
-                        <br>
-                        M'n mattie <a style="color: #00d1b2;">@YoyoSiebers</a> zei dat deze site geen scam site was. Ik
-                        vertrouwde hem en hij had gelijk. Ik heb gekke doekoes gemaakt G.
-
-                    </p>
-                </div>
-                <nav class="level">
-                    <div class="level-left">
-                        <a class="level-item">
-                            <span class="icon is-small"><i class="fa fa-reply"></i></span>
-                        </a>
-                        <a class="level-item">
-                            <span class="icon is-small"><i class="fa fa-retweet"></i></span>
-                        </a>
-                        <a class="level-item">
-                            <span class="icon is-small"><i class="fa fa-heart"></i></span>
-                        </a>
-                    </div>
-                </nav>
-            </div>
-        </article>
-    </div> <!-- 4e echte customers review end -->
-
-
-</div>
-
-<hr>
-<footer class="footer">
-    <div class="container">
-        <div class="content has-text-centered">
-            <p>
-                <strong>EZSkins</strong><a id="footertekst"> by Thomas Zwarts & Barry Willems. </a>
-            </p>
-            <p>
-                <a class="icon" href="https://github.com/Thomas-X/EZSkins">
-                    <i class="fa fa-github"></i>
-                </a>
-            </p>
+    <div class="animate-bottom">
+        <div class="slider">
+            <figure>
+                <img class="img1" src="img/slider/cyrex.png">
+                <img class="img2" src="img/slider/dragonking.png">
+                <img class="img3" src="img/slider/dragonlore.png">
+                <img class="img4" src="img/slider/fireserpent.png">
+                <img class="img5" src="img/slider/howl.png">
+                <img class="img6" src="img/slider/vulcan.png">
+                <img class="img7" src="img/slider/cyrex.png">
+            </figure>
+            <a id="button" onclick="" class="button is-danger is-medium"><strong>BUY NOW</strong></a>
         </div>
+
+
+        <section id="balk" class="hero is-primary">
+            <div id="balk" class="hero-body">
+                <div id="balk" class="container has-text-centered">
+                    <h1 class="title">
+                        Customer Reviews
+                    </h1>
+                    <h2 class="subtitle">
+                        <i>By our most loyal customers to date</i>
+                    </h2>
+                </div>
+            </div>
+        </section>
+
+
+        <!--<div class="randombalk"> &lt;!&ndash; random balk onder de slider &ndash;&gt;-->
+        <!--<br><br>-->
+        <!--</div> &lt;!&ndash; end of the random balk &ndash;&gt;-->
+
+        <div id="uberbox">
+
+            <div class="box"> <!-- 1e echte customers review -->
+                <article class="media">
+                    <div class="media-left">
+                        <figure class="image is-64x64">
+                            <img src="img/reviews/janjaan.png" alt="Image">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>Jan Jaap Siebers</strong>
+                                <small>@YoyoSiebers</small>
+                                <small>31m</small>
+                                <br>
+                                Yo gabbers je mattie Siebers hierzo. Vette website. Ik heb gister hierzo goedkope
+                                skinna's
+                                gekocht G! Echt een aanrader!
+                            </p>
+                        </div>
+                        <nav class="level">
+                            <div class="level-left">
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fa fa-reply"></i></span>
+                                </a>
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fa fa-retweet"></i></span>
+                                </a>
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fa fa-heart"></i></span>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </article>
+            </div> <!-- 1e echte customers review end -->
+            <div class="box"> <!-- 2e echte customers review -->
+                <article class="media">
+                    <div class="media-left">
+                        <figure class="image is-64x64">
+                            <img src="img/reviews/pietje.jpg" alt="Image">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>Piet de Vries</strong>
+                                <small>@JeMannetjePiet</small>
+                                <small>5m</small>
+                                <br>
+                                Hello my name is Piet I saw this website on <a>https://www.csgobets-noscam.org/really-noscam/</a>.
+                                And
+                                it's true there is no scam. I like it!
+
+                            </p>
+                        </div>
+                        <nav class="level">
+                            <div class="level-left">
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fa fa-reply"></i></span>
+                                </a>
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fa fa-retweet"></i></span>
+                                </a>
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fa fa-heart"></i></span>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </article>
+            </div> <!-- 2e echte customers review end -->
+
+            <!--SECOND ROW-->
+            <div class="box"> <!-- 3e echte customers review -->
+                <article class="media">
+                    <div class="media-left">
+                        <figure class="image is-64x64">
+                            <img src="img/reviews/ton.png" alt="Image">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>Ton van Beuningen</strong>
+                                <small>@TonnieBoi</small>
+                                <small>54m</small>
+                                <br>
+                                Yo ene <a style="color: #00d1b2;">@YoyoSiebers</a> zei dat deze site D0pe was. Ik heb
+                                meteen al
+                                m'n geld op de site gezet en 50 gut knife safari mesh gekocht.
+                            </p>
+                        </div>
+                        <nav class="level">
+                            <div class="level-left">
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fa fa-reply"></i></span>
+                                </a>
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fa fa-retweet"></i></span>
+                                </a>
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fa fa-heart"></i></span>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </article>
+            </div> <!-- 3e echte customers review end -->
+            <div class="box"> <!-- 4e echte customers review -->
+                <article class="media">
+                    <div class="media-left">
+                        <figure class="image is-64x64">
+                            <img src="img/reviews/job.jpg" alt="Image">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>Job Jaap Siebers</strong>
+                                <small>@PatatjeJopJaap</small>
+                                <small>48m</small>
+                                <br>
+                                M'n mattie <a style="color: #00d1b2;">@YoyoSiebers</a> zei dat deze site geen scam site
+                                was. Ik
+                                vertrouwde hem en hij had gelijk. Ik heb gekke doekoes gemaakt G.
+
+                            </p>
+                        </div>
+                        <nav class="level">
+                            <div class="level-left">
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fa fa-reply"></i></span>
+                                </a>
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fa fa-retweet"></i></span>
+                                </a>
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fa fa-heart"></i></span>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </article>
+            </div> <!-- 4e echte customers review end -->
+
+
+        </div>
+
+        <hr>
+        <footer class="footer">
+            <div class="container">
+                <div class="content has-text-centered">
+                    <p>
+                        <strong>EZSkins</strong><a id="footertekst"> by Thomas Zwarts & Barry Willems. </a>
+                    </p>
+                    <p>
+                        <a class="icon" href="https://github.com/Thomas-X/EZSkins">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </footer>
     </div>
-</footer>
+</div>
 </body>
 </html>

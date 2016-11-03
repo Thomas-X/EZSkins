@@ -151,3 +151,87 @@ hr {
 .nav-item img {
     max-height: 51px !important;
 }
+
+#navcolor {
+    background-color: #222329;
+}
+
+#githubicon {
+    transition: 300ms;
+}
+
+#githubicon:hover {
+    transition: 300ms;
+    color: #a2a3a0;
+}
+
+#navitemcolor {
+    transition: 300ms;
+    color: white;
+    border-bottom:none;
+}
+
+#navitemcolor:hover {
+    transition: 300ms;
+    color: #EE424B;
+    border-bottom:2px solid #EE424B;
+}
+
+.nav {
+    height: 75px;
+    background-color: #222329;
+}
+
+#redline {
+    border-top: 2px solid #EE424B;
+}
+
+.nav-right {
+    background-color: #222329;
+}
+
+#nav-toggle {
+    align-self: center;
+    padding-top: 75px;
+}
+
+.nav-toggle span {
+    transition: 300ms;
+    background-color: white;
+}
+
+.nav-toggle:hover span {
+    transition: 300ms;
+    background-color: black;
+}
+
+.nav-toggle.is-active:hover span {
+    transition: 300ms;
+    background-color: black;
+}
+
+.nav-toggle:hover {
+    transition: 300ms;
+    background-color: whitesmoke;
+}
+
+.nav-toggle.is-active span {
+    transition: 300ms;
+    background-color: whitesmoke;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        background-color: #222329;
+    }
+
+}
+
+#logoezskins {
+    width: 144px;
+    height: 51px;
+}
+
+.nav-item img {
+    max-height: 51px !important;
+}

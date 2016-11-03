@@ -14,7 +14,7 @@ body {
 
 #githubicon:hover {
     transition: 300ms;
-    color: #EE424B;
+    color: #EE424B !important;
 }
 
 hr {
@@ -66,6 +66,13 @@ hr {
     border-top: 2px solid #EE424B;
 }
 
+#githubicon {
+    transition: 300ms;
+}
+#githubicon:hover {
+    transition: 300ms;
+    color: #EE424B;
+}
 
 #navcolor {
     background-color: #222329;
@@ -113,32 +120,32 @@ hr {
 
 .nav-toggle span {
     transition: 300ms;
-    background-color: white;
+    background-color: white !important;
 }
 
 .nav-toggle:hover span {
     transition: 300ms;
-    background-color: black;
+    background-color: black !important;
 }
 
 .nav-toggle.is-active:hover span {
     transition: 300ms;
-    background-color: black;
+    background-color: black !important;
 }
 
 .nav-toggle:hover {
     transition: 300ms;
-    background-color: whitesmoke;
+    background-color: whitesmoke !important;
 }
 
 .nav-toggle.is-active span {
     transition: 300ms;
-    background-color: whitesmoke;
+    background-color: whitesmoke !important;
 }
 
 @media screen and (max-width: 768px) {
     .nav-menu {
-        background-color: #222329;
+        background-color: #222329 !important;
     }
 
 }

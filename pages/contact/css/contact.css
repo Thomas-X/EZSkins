@@ -86,22 +86,22 @@ iframe {
 
 .nav-toggle span {
     transition: 300ms;
-    background-color: white;
+    background-color: white !important;
 }
 
 .nav-toggle:hover span {
     transition: 300ms;
-    background-color: black;
+    background-color: black !important;
 }
 
 .nav-toggle.is-active:hover span {
     transition: 300ms;
-    background-color: black;
+    background-color: black !important;
 }
 
 .nav-toggle:hover {
     transition: 300ms;
-    background-color: whitesmoke;
+    background-color: whitesmoke !important;
 }
 
 .nav-toggle.is-active span {

@@ -5,7 +5,7 @@
 var timeOut;
 
 function loadFunc() {
-    timeOut = setTimeout(showPage, 1500);
+    timeOut = setTimeout(showPage, 300);
 
 }
 

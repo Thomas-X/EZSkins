@@ -1,6 +1,7 @@
 
 body {
     margin: 0;
+    /*background-color:#161619;*/
 }
 
 /*@media screen and (max-width:767px) {*/
@@ -222,6 +223,7 @@ hr {
 
 .page {
     display:none;
+    background-color:#161619;
 }
 .quickSpin {
     -webkit-animation: fa-spin 1s infinite ease-in-out;

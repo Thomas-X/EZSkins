@@ -1,7 +1,7 @@
 
 body {
     margin: 0;
-    background-color: #161619;
+    /*background-color:#161619;*/
 }
 
 /*@media screen and (max-width:767px) {*/
@@ -221,8 +221,14 @@ hr {
     background-color:#222329;
 }
 
+#imgabout {
+
+}
+
 .page {
     display:none;
+    background-color:#161619;
+
 }
 .quickSpin {
     -webkit-animation: fa-spin 1s infinite ease-in-out;
@@ -241,4 +247,15 @@ html {
 }
 body {
     height:100%;
+}
+
+@media screen and (max-width:1154px) {
+    #mediaquery1154px {
+        width:100%;
+    }
+}
+@media screen and (min-width:1153px) {
+    #mediaquery1154 {
+        width:43%
+    }
 }

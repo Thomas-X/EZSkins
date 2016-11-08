@@ -46,6 +46,8 @@ else {
 ?>
 <br><a href="login.php">Already registered?</a>
 
+
+//TODO MAKE MD5 ENCRYPTION WITH PHP AND MAYBE LOGIN ISN'T NEEDED? CART WITH $_SESSION
 </body>
 </html>
 

@@ -207,11 +207,12 @@ html {
 }
 
 #uberbox {
-    display: flex;
+    display: none;
     margin: auto;
     justify-content: center;
     width: 65%;
     flex-wrap: wrap;
+
 }
 
 

@@ -1,14 +1,17 @@
 <?php
 
 //input from user (via form)
-if(isset($_POST['submit'])) {
+if (isset($_POST['submit'])) {
     session_start();
     //connect variable
     $connect = mysqli_connect("localhost", "root", "admin", "ezskins");
 
     //user inputs
+
     $username = mysqli_real_escape_string($connect, $_POST['username']);
-    $password = mysqli_real_escape_string($connect, $_POST['password']);
+    $escapedpassword = mysqli_real_escape_string($connect, $_POST['password']);
+
+    $password = md5($escapedpassword);
 
 
     //boolean
@@ -32,7 +35,7 @@ if(isset($_POST['submit'])) {
         $message = "Logging in.."; //logging-y stuff
 
         //setting current user session
-        $_SESSION['username']=$username;
+        $_SESSION['username'] = $username;
         header('Location: session.php');
         exit();
 
@@ -43,8 +46,7 @@ if(isset($_POST['submit'])) {
 
         $message = "Invalid credentials!";
     }
-}
-//standard default message, this only changes when the user clicks on login which is nice
+} //standard default message, this only changes when the user clicks on login which is nice
 else {
     $message = "Please log in.";
 }
@@ -62,7 +64,7 @@ else {
 <form action="login.php" method="post">
     Username: <input type="text" name="username"><br>
     Password: <input type="password" name="password"><br>
-    Login:    <input type="submit" name="submit" value="Login">
+    Login: <input type="submit" name="submit" value="Login">
 </form>
 
 

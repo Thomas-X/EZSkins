@@ -10,4 +10,15 @@ else {
 
 //TODO MAKE MD5 ENCRYPTION WITH PHP AND MAYBE LOGIN ISN'T NEEDED? CART WITH $_SESSION
 }
+?>
+<html>
+<head>
+<title>session.php</title>
+</head>
+<body>
+
+<a href="logout.php">Log out</a>
+
+</body>
+</html>
 

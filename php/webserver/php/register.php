@@ -7,7 +7,9 @@ if (isset($_POST['submit'])) {
 
     //declaring variables, for ease of use
     $username = mysqli_real_escape_string($connect, $_POST['username']);
-    $password = mysqli_real_escape_string($connect, $_POST['password']);
+    $escapedpassword = mysqli_real_escape_string($connect, $_POST['password']);
+
+    $password = md5($escapedpassword);
 
 
     //we loop this query till we find a username in the database rows

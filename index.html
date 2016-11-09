@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/font-awesome.css">
     <script src="js/toggleNav.js"></script>
     <script src="js/loadFunc.js"></script>
+    <script src="js/button1.js"></script>
 </head>
 <div id="loaderawesomeness" class="loader2" style="display:flex; justify-content: center;transition:300ms;">
 
@@ -81,7 +82,7 @@
                 <img class="img6" src="img/slider/vulcan.png">
                 <img class="img7" src="img/slider/cyrex.png">
             </figure>
-            <a id="button" onclick="" class="button is-danger is-medium"><strong>BUY NOW</strong></a>
+            <a id="button" onclick="redButton()" class="button is-danger is-medium"><strong>BUY NOW</strong></a>
         </div>
 
 
@@ -262,12 +263,19 @@
             <div class="container">
                 <div class="content has-text-centered">
                     <p>
-                        <strong>EZSkins</strong><a id="footertekst"> by Thomas Zwarts & Barry Willems. </a>
+                        <strong>EZSkins</strong><a style="color: white;" id="footertekst"> by Thomas Zwarts & Barry Willems. </a>
                     </p>
                     <p>
-                        <a class="icon" href="https://github.com/Thomas-X/EZSkins">
-                            <i class="fa fa-github"></i>
-                        </a>
+                        <a class="icon" id="iconbot" href="pages/webshop/webshop.html">
+                            <i class="fa fa-shopping-cart"></i></a>
+                        <a class="icon" id="iconbot" href="pages/news/news.html">
+                            <i class="fa fa-newspaper-o"></i></a>
+                        <a class="icon" id="iconbot" href="pages/about/about.html">
+                            <i class="fa fa-question-circle"></i></a>
+                        <a class="icon" id="iconbot" href="pages/faq/faq.html">
+                            <i class="fa fa-comment"></i></a>
+                        <a class="icon" id="iconbot" href="pages/contact/contact.html">
+                            <i class="fa fa-address-card-o"></i></a>
                     </p>
                 </div>
             </div>

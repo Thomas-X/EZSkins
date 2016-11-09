@@ -259,3 +259,13 @@ body {
         width:43%
     }
 }
+
+/*FOOTER ICONS*/
+#iconbot {
+    margin-right: 15px;
+}
+
+#iconbot:last-child {
+    margin-right: 0px;
+}
+/*FOOTER ICONS*/

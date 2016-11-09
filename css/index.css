@@ -1,5 +1,7 @@
-.img1, .img2, .img3, .img4 {
-}
+.img1,
+.img2,
+.img3,
+.img4 {}
 
 @keyframes slider {
     0% {
@@ -44,7 +46,6 @@
     100% {
         left: -600%;
     }
-
 }
 
 .slider {
@@ -52,25 +53,21 @@
     width: 100%;
     height: 600px;
     text-align: center;
-
 }
 
 .slider figure img {
     width: 14.28%;
     float: left;
     height: 600px;
-
 }
 
 @media screen and (max-width: 1500px) {
     .slider {
         height: 400px;
     }
-
     .slider figure img {
         height: 400px;
     }
-
 }
 
 .slider figure {
@@ -83,18 +80,18 @@
 
 body {
     background-color: #161619;
-    margin:0;
-    height:100%;
+    margin: 0;
+    height: 100%;
 }
+
 html {
-    height:100%;
+    height: 100%;
 }
 
 #button {
     transition: 300ms;
     color: #161619;
     transform: translateY(-120%);
-
 }
 
 #button:hover {
@@ -115,30 +112,33 @@ html {
     color: #EE424B;
 }
 
-
 .nav-item.is-noactive {
     transition: 300ms;
     color: #fffbeb;
-    border-bottom:none ;
+    border-bottom: none;
 }
+
 .nav-item.is-noactive:hover {
     transition: 300ms;
-    color:#EE424B;
-    border-bottom:2px #EE424B solid;
+    color: #EE424B;
+    border-bottom: 2px #EE424B solid;
 }
+
 .nav-item.is-yesactive {
     transition: 300ms;
     color: #fffbeb;
-    border-bottom:none;
+    border-bottom: none;
 }
+
 .nav-item.is-yesactive:hover {
     transition: 300ms;
-    color:#EE424B !important;
-    border-bottom:none;
+    color: #EE424B !important;
+    border-bottom: none;
 }
+
 @media screen and (min-width:768px) {
     .nav-item.is-yesactive {
-        border-bottom:none !important;
+        border-bottom: none !important;
     }
     .nav-item.is-yesactive:hover {
         border-bottom: 2px #EE424B solid !important;
@@ -184,7 +184,6 @@ html {
     .nav-menu {
         background-color: #222329;
     }
-
 }
 
 #logoezskins {
@@ -208,14 +207,17 @@ html {
 }
 
 #uberbox {
-    display: flex;
+    display: none;
     margin: auto;
     justify-content: center;
     width: 65%;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
+
 }
 
+
 /*FOOTER */
+
 .footer {
     background-color: #161619;
     color: #fffbeb;
@@ -229,40 +231,44 @@ html {
 .footer i {
     transition: 300ms;
     color: #fffbeb;
-
 }
 
 .footer i:hover {
     transition: 300ms;
     color: #EE424B !important;
 }
+
 #footertekst {
-    color:#fffbeb;
+    color: #fffbeb;
 }
 
 .footer a {
     border-bottom-color: transparent !important;
 }
 
+
 /*FOOTER*/
 
 #redline {
     border-top: 2px solid #EE424B;
 }
+
 hr {
     background-color: #dbdbdb;
     border: none;
     display: block;
     height: 1px;
     margin: 20px 0;
-    width:65%;
-    margin:auto;
+    width: 65%;
+    margin: auto;
 }
+
 .box {
-    margin:20px;
+    margin: 20px;
 }
+
 #balk {
-    background-color:#222329;
+    background-color: #222329;
 }
 
 
@@ -274,7 +280,7 @@ hr {
     -webkit-animation-duration: 0.85s;
     animation-name: animatebottom;
     animation-duration: 0.85s;
-    background-color:#161619;
+    background-color: #161619;
 }
 
 .animate-bottom2 {
@@ -283,45 +289,67 @@ hr {
     -webkit-animation-duration: 0.85s;
     animation-name: animatebottom;
     animation-duration: 0.85s;
-    background-color:#222329;
+    background-color: #222329;
 }
 
-
 @-webkit-keyframes animatebottom {
-    from { bottom:-50px; opacity:0 }
-    to { bottom:0px; opacity:1 }
+    from {
+        bottom: -50px;
+        opacity: 0
+    }
+    to {
+        bottom: 0px;
+        opacity: 1
+    }
 }
 
 @keyframes animatebottom {
-    from{ bottom:-50px; opacity:0 }
-    to{ bottom:0; opacity:1 }
+    from {
+        bottom: -50px;
+        opacity: 0
+    }
+    to {
+        bottom: 0;
+        opacity: 1
+    }
 }
-
-
-
 
 .loader2 {
     /*display:block;*/
-    transition:300ms;
-    opacity:1;
-
-    width:100%;
-    height:100%;
-    background-color:#222329;
+    transition: 300ms;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #222329;
 }
 
 #page {
     /*display:none;*/
 }
+
 .quickSpin {
     -webkit-animation: fa-spin 1s infinite ease-in-out;
     animation: fa-spin 1s infinite ease-in-out;
 }
+
 #hover {
-    transition:300ms;
+    transition: 300ms;
 }
-#hover:hover{
-    transition:300ms;
-    color:#EE424B;
+
+#hover:hover {
+    transition: 300ms;
+    color: #EE424B;
 }
+
+
 /* END PRE LOADER */
+
+/*FOOTER ICONS*/
+#iconbot {
+    margin-right: 15px;
+}
+
+#iconbot:last-child {
+    margin-right: 0px;
+}
+/*FOOTER ICONS*/

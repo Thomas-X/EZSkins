@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
     //since we are sure we do not have duplicates in our database, we do not have to worry about accidental extras
 
 //searching for usernames
-    $mysql_get_users = mysqli_query($connect, "SELECT * FROM logindata where username='$username' and password='$password'");
+    $mysql_get_users = mysqli_query($connect, "SELECT * FROM logindata WHERE username='$username' AND password='$password'");
     $get_rows = mysqli_affected_rows($connect);
 
     //if we found the username the user entered, set usernamevalid to true

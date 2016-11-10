@@ -8,15 +8,24 @@ if (!isset($_SESSION['cart'])) {
 
 
 //if the $_GET ID is NOT empty do this
-if (!empty($_GET['id'])) {
+if (isset($_GET['id'])) {
 
-    //push the current ID to the cart array
-    array_push($_SESSION['cart'], $_GET['id']);
+    $connect = mysqli_connect("localhost", "root", "admin", "ezskins");
+    $enteredid = $_GET['id'];
+    var_dump($enteredid);
+    $getvalidid = mysqli_query($connect, "SELECT * FROM skins WHERE id='$enteredid'");
+    var_dump($getvalidid);
+    //push the current ID to the cart array, if the ID is valid
+    if ($getvalidid) {
+        array_push($_SESSION['cart'], $_GET['id']);
 
-    //so we don't get null items when you go to your cart directly without adding 'items'
-    array_filter($_SESSION['cart']);
+        //so we don't get null items when you go to your cart directly without adding 'items'
+        array_filter($_SESSION['cart']);
 
-
+    }
+    else {
+        echo "Stop messing with the URL please, it's not gonna work.";
+    }
 }
 
 if (isset($_GET['remove'])) {

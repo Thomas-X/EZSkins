@@ -5,6 +5,7 @@ if (isset($_SESSION['username'])) {
 }
 else {
     header('Location: login.php');
+    session_abort();
     exit();
 
 
@@ -18,6 +19,7 @@ else {
 <body>
 
 <a href="logout.php">Log out</a>
+<h1>TODO IMPROVE LOGOUT BY CLOSING SESSION ASWELL</h1>
 
 </body>
 </html>

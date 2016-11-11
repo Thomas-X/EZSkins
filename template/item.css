@@ -1,0 +1,67 @@
+/*start item frame*/
+.item-frame {
+    width: 265px;
+    height: 370px;
+    background-color: #222329;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.top-item-frame {
+    color: #ee424b;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 20px;
+}
+
+.picture-item-frame {
+    border-top: 2px solid #EE424B;
+    border-bottom: 2px solid #EE424B;
+    height: 183px;
+}
+
+.price-item-frame {
+    color: #fffbeb;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 20px;
+
+}
+
+.button-css {
+    font-size: 20px;
+    width: 265px;
+    height: 75px;
+    background-color: #EE424B;
+    color: black;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+
+    transition:all 200ms;
+}
+
+.button-css a {
+    font-size: 20px;
+    transition:all 200ms;
+}
+.button-css i {
+    padding-right: 10px;
+    font-size: 25px;
+    transition:all 200ms;
+}
+
+.button-css:hover i {
+    font-size: 30px;
+    transition:all 200ms;
+}
+
+.button-css:hover a, .button-css:hover {
+    transition:all 200ms;
+    background-color: #ff4851;
+    font-size: 25px;
+
+}
+
+/*end item frame*/

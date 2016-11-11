@@ -1,11 +1,15 @@
 /*start item frame*/
 .item-frame {
     width: 265px;
-    height: 370px;
+    /*height: 370px;*/
     background-color: #222329;
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
+    margin:5px;
+    position:relative;
+    height:359px; /*INB4 YOU DELETE ME, THIS IS NEEDED, PROBABLY */
 }
+.
 
 .top-item-frame {
     color: #ee424b;
@@ -20,6 +24,11 @@
     height: 183px;
 }
 
+.picture-item-frame img {
+    height: 183px;
+    width: 248px;
+}
+
 .price-item-frame {
     color: #fffbeb;
     padding-top: 15px;
@@ -28,7 +37,7 @@
 
 }
 
-.button-css {
+ .button-css {
     font-size: 20px;
     width: 265px;
     height: 75px;
@@ -62,6 +71,14 @@
     background-color: #ff4851;
     font-size: 25px;
 
+}
+
+.flex-container {
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    /*width:82.5%;*/
+    align-items:stretch;
 }
 
 /*end item frame*/

@@ -65,7 +65,7 @@ $arrayfinal = array_values($arrayunique);
 <body>
 
 <br><a href="remove_from_cart.php?remove=1">Remove items from cart</a>
-<br><a href="cartitems.php">Add items to cart</a>
+<br><a href="search.php">Add items to cart</a>
 <br>
 
 

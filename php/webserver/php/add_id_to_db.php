@@ -16,8 +16,8 @@
 ////           TODO: THIS SCRIPT IS EXTREMELY DANGEROUS, DO NOT GO TO PAGE UNLESS CERTAIN
 ////
 ////////////////////////////////////////////////////////////////////////////////////////////////
-
-
+//
+//
 //$connect = mysqli_connect("localhost", "root", "admin", "ezskins");
 //$query = mysqli_query($connect, "SELECT * FROM skins");
 //$count = mysqli_num_rows($query);

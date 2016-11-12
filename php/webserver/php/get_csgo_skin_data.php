@@ -10,7 +10,7 @@
 ////           TODO: THIS SCRIPT IS EXTREMELY DANGEROUS, DO NOT GO TO PAGE UNLESS CERTAIN
 ////
 ////////////////////////////////////////////////////////////////////////////////////////////////
-//
+////
 //$connect = mysqli_connect("localhost", "root", "admin", "ezskins");
 //$filename = "data.json";
 //$jsondata = file_get_contents($filename);
@@ -36,5 +36,5 @@
 //    mysqli_query($connect, "INSERT INTO skins2(markethash) VALUES (N'$markethash')");
 //}
 //var_dump($markethash);
-
+//
 //query

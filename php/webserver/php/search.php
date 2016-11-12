@@ -28,6 +28,11 @@ echo "<form action=\"search.php?page=$getcurrentpagemath\" method=\"post\">
     <input type=\"submit\" value=\"Submit\" name=\"submit\">
     </form>";
 
+var_dump($_POST['search']);
+var_dump($_GET['search']);
+
+
+
 
 $getsearch = @$_POST['search'];
 $getpage = 0;

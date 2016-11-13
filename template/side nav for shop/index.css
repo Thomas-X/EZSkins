@@ -1,0 +1,19 @@
+.side-nav-frame {
+    font-family: 'Ubuntu', sans-serif;
+    height: 100%;
+    width: 17%; /*with van side nav*/
+    background-color: #161619;
+}
+
+.side-nav-title {
+    background-color: #222329;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #EE424B;
+    border-bottom: 2px solid #EE424B;
+}
+
+.side-nav-title span {
+    font-size: 25px;
+}

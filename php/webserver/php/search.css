@@ -15,7 +15,9 @@
     color: #ee424b;
     padding-top: 15px;
     padding-bottom: 15px;
-    font-size: 20px;
+}
+.top-item-frame a {
+    font-size:1.5vh;
 }
 
 .picture-item-frame {
@@ -82,3 +84,4 @@
 }
 
 /*end item frame*/
+

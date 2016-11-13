@@ -5,8 +5,6 @@ session_start();
 if (!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = array();
 }
-
-
 //if the $_GET ID is NOT empty do this
 if (isset($_GET['id'])) {
 
@@ -50,7 +48,6 @@ $arrayunique = array_unique($_SESSION['cart']);
 //because array_unique doesn't recalculate keys
 $arrayfinal = array_values($arrayunique);
 
-//dump the contents of the array
 
 ?>
 <!DOCTYPE html>
@@ -75,17 +72,15 @@ $buttonstoadd = count($_SESSION['cart']);
 
 
 //TODO get item ID's name and make that the value of button (db query)
+
+
 foreach ($arrayfinal as $counter) {
     echo "<form method='get'><input id='$counter' type='submit' value='$counter' name='remove' onclick='removeButton(this.id)'></form>";
     $counter++;
 }
-//remove$counter
-//for ($counter2 = 0; $counter2 < $counter; $counter2++) {
-//    echo "<?php if(isset($counter2)) { unset($arrayfinal[$counter2]); }
-//}
-//array_values($_SESSION['cart']);
 var_dump($arrayfinal);
 ?>
+
 
 <h1>TODO: Make it so you can't just put any ?id=(anything) in the URL, only ID's that the database knows (do this with
     queries)</h1>

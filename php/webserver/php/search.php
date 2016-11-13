@@ -1,5 +1,82 @@
-<?php error_reporting(-1); ?>
-<?php ini_set('display_errors', true); ?>
+<?php
+session_start();
+
+//if the cart isn't set to an array already
+if (!isset($_SESSION['cart'])) {
+    $_SESSION['cart'] = array();
+}
+//if the $_GET ID is NOT empty do this
+if (isset($_GET['id'])) {
+
+    $connect = mysqli_connect("localhost", "root", "admin", "ezskins");
+    $enteredid = $_GET['id'];
+
+    $getvalidid = mysqli_query($connect, "SELECT * FROM skins2 WHERE id='$enteredid'");
+    $countvalididrows = mysqli_num_rows($getvalidid);
+
+    //push the current ID to the cart array, if the ID is valid
+    if ($countvalididrows != 0) {
+        array_push($_SESSION['cart'], $_GET['id']);
+
+        //so we don't get null items when you go to your cart directly without adding 'items'
+        array_filter($_SESSION['cart']);
+
+    } else {
+        echo "<script type='text/javascript'>alert('STOP MESSING WITH THE URL!! :D');</script>";
+    }
+}
+
+if (isset($_GET['remove'])) {
+
+    //for the cheeky buggers that like messing with the URL
+    $connect = mysqli_connect("localhost", "root", "admin", "ezskins");
+    $enteremove = $_GET['remove'];
+    $getvalidremove = mysqli_query($connect, "SELECT * FROM skins2 WHERE id='$enteremove'");
+    $countvalidremoverows = mysqli_num_rows($getvalidremove);
+
+
+
+    if ($countvalidremoverows != 0) {
+        array_unique($_SESSION['cart']);
+        array_values($_SESSION['cart']);
+        $arraykeys = array_keys($_SESSION['cart'], $_GET['remove']);
+        $countkeys = count($arraykeys);
+
+        $counter2 = 0;
+
+        foreach ($arraykeys as $counter2) {
+            unset($_SESSION['cart'][$counter2]);
+            $counter2++;
+        }
+    }
+    else {
+        echo "<script type='text/javascript'>alert('STOP MESSING WITH THE URL!! :D');</script>";
+    }
+}
+//else {
+//    echo "<script type='text/javascript'>alert('STOP MESSING WITH THE URL!! :D');</script>";
+//}
+
+
+//only unique items in the cart, please
+$arrayunique = array_unique($_SESSION['cart']);
+array_values($arrayunique);
+$arrayfinal = $arrayunique; //im lazy..
+//adding remove buttons
+$counter = 0;
+$buttonstoadd = count($_SESSION['cart']);
+
+
+
+
+
+foreach ($arrayfinal as $counter) {
+    echo "<form method='get'><input id='$counter' type='submit' name='remove' value='$counter' onclick='removeButton(this.id)'></form>";
+    $counter++;
+}
+
+//end
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,62 +84,52 @@
     <title>
         Search
     </title>
-    <link rel="stylesheet" href="item.css">
+    <link rel="stylesheet" href="search.css">
     <link rel="stylesheet" href="../../../css/font-awesome.css">
+    <script src="js/removeButton.js"></script>
 </head>
 <body>
-<h1>have static homepage of webshop with popular items, use API or just do it manual, it's 20 items or so, however many
-    fit</h1>
-<h1>change output in search.php to something like this drawing:
-    C:\Users\Thomas X\Documents\ShareX\Screenshots\2016-11\PaintDotNet_2016-11-10_21-13-56</h1>
 
 <?php
 
-$getcurrentpage = $_GET['page'];
+$getcurrentpage = @$_GET['page'];
+$getcurrentpagemath = $getcurrentpage + 1;
 
-$getcurrentpagemath = $getcurrentpage + 1; //search is getting overwritten somewhere above
-//$search = $_GET['search'];
+
+if (@$_GET['search'] == '') {
+    echo "Search here";
+}
+
 
 echo "<form action=\"search.php?page=$getcurrentpagemath\" method=\"post\">
     <input name=\"search\" type=\"text\">
     <input type=\"submit\" value=\"Submit\" name=\"submit\">
     </form>";
 
-var_dump($_POST['search']);
-var_dump($_GET['search']);
-
-
 
 
 $getsearch = @$_POST['search'];
+$getsearch2 = @$_GET['search'];
 $getpage = 0;
-//var_dump($getsearch);
+
 
 
 if (@$_POST['submit']) {
     header("Location: search.php?page=$getpage&search=$getsearch");
 }
 
-if (isset($_GET['page']) && isset($_GET['search'])) {
+
+if (isset($_GET['page']) && isset($_GET['search']) && ($_GET['search'] != '')) {
     $connect = mysqli_connect("localhost", "root", "admin", "ezskins");
 
 
     $usersearch = mysqli_real_escape_string($connect, $_GET['search']);
 
-
-//for the AK-47 and Five-SeveN and other names with ""
-//if (strpos("$usersearch", "-") === false) {
-//    //nothing found, so we continue
-//}
-//else {
-//    $userseachnobaddies = str_replace("", " ", $usersearch);
-//}
-//    unset($usersearchexploded);
     $usersearchexploded = explode(" ", $usersearch);
-//    var_dump($usersearchexploded);
+
     $arraycount = count($usersearchexploded);
     $page = ($_GET['page']);
-//    var_dump($page);
+
     $pageclean = $page * 10;
 
 
@@ -72,7 +139,7 @@ if (isset($_GET['page']) && isset($_GET['search'])) {
     }
     $output = '';
     $countamountfind = mysqli_num_rows($query);
-//    '<br><a>' . $searchoutput . '</a>'
+
 
     if ($countamountfind == 0) {
         echo "No results found!!";
@@ -103,40 +170,23 @@ if (isset($_GET['page']) && isset($_GET['search'])) {
     <div class="picture-item-frame"><img src="' . $imgsrc . '" > </div>
     <div class="price-item-frame">€' . $price . '</div>
     <div class="button-item-frame">
-        <a href="add_to_cart?id=' . $id . '"><button class="button-css">
+        <a href="search.php?page=' . $getcurrentpage . '&search=' . $getsearch2 . '&id=' . $id . '"><button class="button-css">
             <i class="fa fa-shopping-cart" aria-hidden="true"></i>ADD TO CART</button></a>
     </div>
 </div>';
         }
-
-//        $howmanypages = $countamountfind / 20;
-//
-//        ceil($howmanypages);
-//        while ($counter2 < $howmanypages) {
-//
-//        }
     }
-//    var_dump($query);
-//    var_dump($countamountfind);
-//    var_dump($searchoutput);
-//    var_dump($imgsrc);
-//    var_dump($price);
-//    var_dump($itemcolor);
-//    var_dump($id);
+
     echo "<div class='flex-container'>";
     if ($output) {
         echo $output;
     }
     echo "</div>";
-    if (!$countamountfind < 10) { //if it's less, there's no next page to go to
-        echo "<a href='search.php?page=$getcurrentpagemath&search=$getsearch'>Next Page</a>";
+
+    if ($countamountfind == 10) { //if it's less, there's no next page to go to
+        echo "<a href='search.php?page=$getcurrentpagemath&search=$getsearch2'>Next Page</a>";
     }
-
-
 }
-
-
 ?>
-
 </body>
 </html>

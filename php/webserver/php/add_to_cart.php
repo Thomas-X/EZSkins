@@ -1,7 +1,5 @@
 <?php
 session_start();
-
-//if the cart isn't set to an array already
 if (!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = array();
 }
@@ -10,45 +8,47 @@ if (isset($_GET['id'])) {
 
     $connect = mysqli_connect("localhost", "root", "admin", "ezskins");
     $enteredid = $_GET['id'];
-    var_dump($enteredid);
-    $getvalidid = mysqli_query($connect, "SELECT * FROM skins WHERE id='$enteredid'");
-    var_dump($getvalidid);
+
+    $getvalidid = mysqli_query($connect, "SELECT * FROM skins2 WHERE id='$enteredid'");
+    $countvalididrows = mysqli_num_rows($getvalidid);
+
     //push the current ID to the cart array, if the ID is valid
-    if ($getvalidid) {
+    if ($countvalididrows != 0) {
         array_push($_SESSION['cart'], $_GET['id']);
 
         //so we don't get null items when you go to your cart directly without adding 'items'
         array_filter($_SESSION['cart']);
 
-    }
-    else {
-        echo "Stop messing with the URL please, it's not gonna work.";
+    } else {
+        echo "<script type='text/javascript'>alert('STOP MESSING WITH THE URL!! :D');</script>";
     }
 }
 
 if (isset($_GET['remove'])) {
-    //unset local array
-//    $findwhichonetoremove = array_search($_GET['remove'], $arrayfinal);
-//    unset($arrayfinal[$findwhichonetoremove]);
-//    $arrayreallyfinal = array_values($arrayfinal);
 
-    //unset SESSION array aswell
-    $findwhichonetoremove2 = array_search($_GET['remove'], $_SESSION['cart']);
-    unset($_SESSION['cart'][$findwhichonetoremove2]);
-    $arrayfinalunique = array_unique($_SESSION['cart']);
-    $arrayfinal = array_values($arrayfinalunique);
+    //for the cheeky buggers that like messing with the URL
+    $connect = mysqli_connect("localhost", "root", "admin", "ezskins");
+    $enteremove = $_GET['remove'];
+    $getvalidremove = mysqli_query($connect, "SELECT * FROM skins2 WHERE id='$enteremove'");
+    $countvalidremoverows = mysqli_num_rows($getvalidremove);
 
 
+    if ($countvalidremoverows != 0) {
+        array_unique($_SESSION['cart']);
+        array_values($_SESSION['cart']);
+        $arraykeys = array_keys($_SESSION['cart'], $_GET['remove']);
+        $countkeys = count($arraykeys);
 
+        $counter2 = 0;
+
+        foreach ($arraykeys as $counter2) {
+            unset($_SESSION['cart'][$counter2]);
+            $counter2++;
+        }
+    } else {
+        echo "<script type='text/javascript'>alert('STOP MESSING WITH THE URL!! :D');</script>";
+    }
 }
-
-//only unique items in the cart, please
-$arrayunique = array_unique($_SESSION['cart']);
-
-//because array_unique doesn't recalculate keys
-$arrayfinal = array_values($arrayunique);
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,35 +56,70 @@ $arrayfinal = array_values($arrayunique);
 <head>
     <meta charset="UTF-8">
     <title>Current shopping cart</title>
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="sideNav/index.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/bulma.css">
+    <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="searchcssxphp.php">
+    <link rel="stylesheet" href="add_to_cart.css">
+
+    <script src="js/toggleNav.js"></script>
+    <script src="js/loadFunc.js"></script>
+    <script src="js/button1.js"></script>
     <script src="js/removeButton.js"></script>
-    <link rel="stylesheet" href="../css/add_to_cart.css">
+    <script src="js/gotoCart.js"></script>
 </head>
 <body>
 
-<br><a href="remove_from_cart.php?remove=1">Remove items from cart</a>
-<br><a href="search.php">Add items to cart</a>
-<br>
-
-
+<div class="cartContainer">
+    <p id="title">Your Shoppingcart<?php if (isset($_SESSION['username'])) {
+            $var1 = $_SESSION['username'];
+                echo ", $var1.";
+            } else {
+                echo ".";
+        }?></p>
+    <hr>
 <?php
+$arrayunique = array_unique($_SESSION['cart']);
+array_values($arrayunique);
+$arrayfinal = $arrayunique; //im lazy..
+//adding remove buttons
 $counter = 0;
 $buttonstoadd = count($_SESSION['cart']);
 
 
-//TODO get item ID's name and make that the value of button (db query)
-
-
 foreach ($arrayfinal as $counter) {
-    echo "<form method='get'><input id='$counter' type='submit' value='$counter' name='remove' onclick='removeButton(this.id)'></form>";
+
+    $connect = mysqli_connect("localhost", "root", "admin", "ezskins");
+    $getidimg2 = mysqli_query($connect, "SELECT icon_url FROM skins WHERE id='$counter'");
+    $getidimgarray = mysqli_fetch_assoc($getidimg2);
+    $getidimg = $getidimgarray['icon_url'];
+    $gettext2 = mysqli_query($connect, "SELECT marketname FROM skins WHERE id='$counter'");
+    $gettextarray = mysqli_fetch_assoc($gettext2);
+    $gettext = $gettextarray['marketname'];
+
+
+    echo "
+    <div class=\"Shopitem\">";
+    if ($getidimg) {
+        echo "<img id=\"imgshopitem\" src=\"$getidimg\">";
+    }
+    else {
+        echo "<img id=\"imgshopitem\" src=\"https://placekitten.com/300/200\"";
+    }
+    echo "<span style='padding-left:20px;align-self: center;'>$gettext</span>";
+    echo "<form method='get' style='width: 45px;align-self:center;'><input id='$counter' class='removeButtonCSS' type='submit' name='remove' value='$counter' onclick='removeButton(this.id)'></form>
+    </div>";
+    
+
     $counter++;
 }
-var_dump($arrayfinal);
 ?>
 
 
-<h1>TODO: Make it so you can't just put any ?id=(anything) in the URL, only ID's that the database knows (do this with
-    queries)</h1>
-<h1>TODO: make search options, e.g "Battlescarred", "Well worn", etc</h1>
-<h1>TODO: add "already added to cart option" if item already is in cart </h1>
+</div>
+
 </body>
 </html>

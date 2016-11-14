@@ -57,19 +57,6 @@ if (isset($_GET['remove'])) {
 
 
 //only unique items in the cart, please
-$arrayunique = array_unique($_SESSION['cart']);
-array_values($arrayunique);
-$arrayfinal = $arrayunique; //im lazy..
-//adding remove buttons
-$counter = 0;
-$buttonstoadd = count($_SESSION['cart']);
-
-
-foreach ($arrayfinal as $counter) {
-    echo "<form method='get'><input id='$counter' type='submit' name='remove' value='$counter' onclick='removeButton(this.id)'></form>";
-    $counter++;
-}
-
 //end
 ?>
     <!DOCTYPE html>
@@ -83,7 +70,6 @@ foreach ($arrayfinal as $counter) {
         <link rel="stylesheet" href="sideNav/index.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/font-awesome.css">
-        <!--    <link rel="stylesheet" href="../../../css/font-awesome.css">-->
         <link rel="stylesheet" href="css/bulma.css">
         <link rel="stylesheet" href="css/faq.css">
         <link rel="stylesheet" href="searchcssxphp.php">
@@ -92,9 +78,11 @@ foreach ($arrayfinal as $counter) {
         <script src="js/loadFunc.js"></script>
         <script src="js/button1.js"></script>
         <script src="js/removeButton.js"></script>
+        <script src="js/gotoCart.js"></script>
+
     </head>
     <body>
-    <nav class="nav">
+    <nav class="nav" style="">
         <div id="navcolor" class="nav-left">
             <a class="nav-item is-brand" href="../../index.html">
                 <img id="logoezskins" src="logo/logo.png" alt="EZSkins logo">
@@ -116,7 +104,7 @@ foreach ($arrayfinal as $counter) {
     </span>
 
 
-        <div id="nav-menu" class="nav-right nav-menu" style="padding-right: 20px;background-color:#222329">
+        <div id="nav-menu" class="nav-right nav-menu" style="background-color:#222329;padding:0;">
             <a id="navitemcolor1" class="nav-item is-noactive" href="../webshop/webshop.html">
                 Shop
             </a>
@@ -142,11 +130,15 @@ if (isset($_SESSION['username'])) {
     </a>";
 }
 else {
-    echo "<a href='login.php?lastpage=search.php' id=\"navitemcolor7\" class='nav-item is-noactive'>
-        Login, please.
+    echo "<a href='login.php?lastpage=search.php' id=\"navitemcolor6\" class='nav-item is-noactive'>
+        Login or Sign up.
     </a>";
 }
-        ?>
+
+echo "<i id='shoppingCart' onclick='gotoCart()' class=\"fa fa-shopping-cart nav-item\" aria-hidden=\"true\"></i>"
+
+
+?>
 
 
     </div>
@@ -176,19 +168,19 @@ if (isset($_GET['page']) && isset($_GET['search']) && ($_GET['search'] != '')) {
     $arraycount = count($usersearchexploded);
     $page = ($_GET['page']);
 
-    $pageclean = $page * 10;
+    $pageclean = $page * 12;
 
 
     for ($counter = 0; $counter < $arraycount; $counter++) {
         $usersearchfinal = $usersearchexploded[$counter];
-        $query = mysqli_query($connect, "SELECT * FROM skins WHERE marketname LIKE '%$usersearchfinal%' ORDER BY marketname LIMIT 10 OFFSET $pageclean");
+        $query = mysqli_query($connect, "SELECT * FROM skins WHERE marketname LIKE '%$usersearchfinal%' ORDER BY marketname LIMIT 12 OFFSET $pageclean");
     }
     $output = '';
     $countamountfind = mysqli_num_rows($query);
-
+    $boolean = false;
 
     if ($countamountfind == 0) {
-        echo "No results found!!";
+        $boolean = true;
     } else {
         while ($row = mysqli_fetch_array($query)) { //I UNDERSTAND THIS NOW YAAAY
             $searchoutput = $row['marketname'];
@@ -212,19 +204,22 @@ if (isset($_GET['page']) && isset($_GET['search']) && ($_GET['search'] != '')) {
             $id = $idarray['id'];
 
             $getcurrentpage = @$_GET['page'];
-            $output .= '<div class="item - frame"> <div class="top - item - frame" style="color:#' . $itemcolor . ' !important;padding-top:15px;padding-bottom:15px;"><a>' . $searchoutput . '</a></div>
+            $output .= '<div class="item-frame"> <div class="top-item-frame" style="color:#' . $itemcolor . ' !important;padding-top:15px;padding-bottom:15px;"><a>' . $searchoutput . '</a></div>
     <div class="picture-item-frame" ><img src = "' . $imgsrc . '" > </div >
     <div class="price-item-frame" >€' . $price . ' </div >
     <div class="button-item-frame" >
         <a href = "search.php?page=' . $getcurrentpage . '&search=' . $getsearch2 . '&id=' . $id . '" ><button class="button-css" >
-            <i class="fa fa-shopping-cart" aria - hidden = "true" ></i > ADD TO CART </button ></a >
-    </div >
+            <i class="fa fa-shopping-basket" aria - hidden = "true" ></i > ADD TO CART </button ></a >
+    </div>
 </div > ';
         }
     }
     $getcurrentpage = @$_GET['page'];
     $getcurrentpagemath = $getcurrentpage + 1;
-    echo "<div class='flex - container'>";
+    echo "<div class='flex-container'>";
+    if ($boolean) {
+        echo "<span style='color: #fffbeb;font-size: 8vh;margin: 20px;'>No results found! :(</span>";
+    }
     if ($output) {
         echo $output;
     }
@@ -247,23 +242,22 @@ echo "<div class=\"side-nav-frame\">
     </div>
 
     <div class=\"side-nav-form\" style='margin:5px;'>
-    <span style='color: white;font - size: 20px;'>Search here</span><br>
-    <form action=\"search.php?page=$getcurrentpagemath\" method=\"post\">
-    <input id='inputField' name=\"search\" type=\"text\">
-    <input class='button is - primary' type=\"submit\" value=\"Search\" name=\"submit\">
+    <form id='form' action=\"search.php?page=$getcurrentpagemath\" method=\"post\" style='margin-top:25px;text-align:center;'>
+    <input id='inputField' name=\"search\" type=\"text\"  placeholder=\"Search here..\" style='height:32px;margin-bottom:11px;'>
+    <input id='buttonInput' class='button is-primary' type=\"submit\" value=\"Search\" name=\"submit\" style='width:144px;'>
     </form>
     </div>
 
 </div>";
 
-if ($countamountfind == 10) { //if it's less, there's no next page to go to
-    echo "<a href='search . php ? page = $getcurrentpagemath & search = $getsearch2'>Next Page</a>";
+if (@$countamountfind == 12) { //if it's less, there's no next page to go to
+    echo "<a href='search.php?page=$getcurrentpagemath&search=$getsearch2'>Next Page</a>";
 }
-$getcurrentpage2 = $_GET['page'];
-$getsearch12 = $_GET['search'];
+@$getcurrentpage2 = $_GET['page'];
+@$getsearch12 = $_GET['search'];
 $getcurrentpagemath2 = $getcurrentpage2 - 1;
-if ($countamountfind && $getcurrentpage2 != 0) {
-    echo "<a href='search . php ? page = $getcurrentpagemath2 & search = $getsearch12'>Previous Page </a>";
+if (@$countamountfind && @$getcurrentpage2 != 0) {
+    echo "<a href='search.php?page=$getcurrentpagemath2&search=$getsearch12'>Previous Page </a>";
 }
 ?>
 </body>

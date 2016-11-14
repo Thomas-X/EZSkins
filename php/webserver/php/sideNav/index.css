@@ -1,0 +1,27 @@
+.side-nav-frame {
+    font-family: 'Ubuntu', sans-serif;
+    height: 100%;
+    width: 17%; /*with van side nav*/
+    background-color: #161619;
+    border-right: 2px solid #EE424B;
+}
+
+.side-nav-title {
+    background-color: #222329;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #EE424B;
+
+}
+
+.side-nav-title span {
+    font-size: 25px;
+}
+.side-nav-form span {
+    font-size:15px;
+    color:white;
+}
+#inputField {
+    width:50%;
+}

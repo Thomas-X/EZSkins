@@ -76,11 +76,19 @@
 }
 
 .flex-container {
+    float:right;
+    width:80%;
     display:flex;
     justify-content: center;
     flex-wrap:wrap;
     /*width:82.5%;*/
     align-items:stretch;
+}
+html {
+    background-color: #161619 !important;
+}
+a:hover {
+    color:transparent;
 }
 
 /*end item frame*/

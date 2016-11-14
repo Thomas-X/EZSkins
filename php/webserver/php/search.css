@@ -87,9 +87,9 @@
 html {
     background-color: #161619 !important;
 }
-a:hover {
-    color:transparent;
-}
 
+/*#navitemcolor6:hover:before {*/
+    /*content: 'Log out?';*/
+/*}*/
 /*end item frame*/
 

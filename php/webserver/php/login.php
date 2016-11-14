@@ -34,9 +34,10 @@ if (isset($_POST['submit'])) {
     if ($validentry === true) {
         $message = "Logging in.."; //logging-y stuff
 
+        $getlastpage = $_GET['lastpage'];
         //setting current user session
         $_SESSION['username'] = $username;
-        header('Location: session.php');
+        header("Location: $getlastpage");
         exit();
 
 
@@ -60,15 +61,16 @@ else {
     <title>Login</title>
 </head>
 <body>
-
-<form action="login.php" method="post">
-    Username: <input type="text" name="username"><br>
-    Password: <input type="password" name="password"><br>
-    Login: <input type="submit" name="submit" value="Login">
-</form>
-
-
 <?php
+$getuserpage = @$_GET['lastpage'];
+echo "<form action=\"login.php?lastpage=$getuserpage\" method=\"post\">
+    Username: <input type=\"text\" name=\"username\"><br>
+    Password: <input type=\"password\" name=\"password\"><br>
+    Login: <input type=\"submit\" name=\"submit\" value=\"Login\">
+</form>";
+
+
+
 echo $message;
 ?>
 <br><a href="register.php">Not registered yet?</a>

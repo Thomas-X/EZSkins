@@ -6,5 +6,8 @@
  * Time: 10:07 AM
  */
 session_abort();
+unset($_SESSION['cart']);
+unset($_SESSION['username']);
+unset($_SESSION);
 header('Location: login.php');
 ?>

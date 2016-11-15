@@ -89,6 +89,16 @@ if (isset($_GET['remove'])) {
         } ?></p>
     <hr>
     <?php
+
+
+
+    $countarray = array_count_values($_SESSION['cart']);
+    var_dump($countarray);
+    $arraykeys2 = array_keys($countarray);
+    var_dump($arraykeys2);
+
+
+
     $arrayunique = array_unique($_SESSION['cart']);
     array_values($arrayunique);
     $arrayfinal = $arrayunique; //im lazy..
@@ -98,6 +108,9 @@ if (isset($_GET['remove'])) {
 
 
     foreach ($arrayfinal as $counter) {
+
+        $enterednum = $countarray[$counter];
+        var_dump($counter);
 
         //connect to db
         $connect = mysqli_connect("localhost", "root", "admin", "ezskins");
@@ -141,15 +154,21 @@ if (isset($_GET['remove'])) {
 
         echo "<div id='flexright' class=\"flex-right\" style='width:49%'>";
 
+        if (@$_GET['removeid'] == 1) {
+            $enterednum++;
+        }
+        if (@$_GET['removeid'] == 0) {
+            $enterednum--;
+        }
 
         if ($getprice) {
-            echo "<span style='align-self: center;text-align: center'>Amount: $enterednum <br><a href='add_to_cart.php?add=1'><i id='plus' class='fa fa-plus' aria-hidden='true'></i></a>   <a href='add_to_cart.php?add=0'><i id='minus' class='fa fa-minus' aria-hidden='true'></i></a></span>";
+            echo "<span style='align-self: center;text-align: center'>Amount: $enterednum <br><a href='add_to_cart.php?removeid=1'><i id='plus' class='fa fa-plus' aria-hidden='true' style='cursor: pointer;'></i></a>   <a href='add_to_cart.php?removeid=0'><i id='minus' class='fa fa-minus' aria-hidden='true' style='cursor: pointer;'></i></a></span>";
         }
 //    var_dump($enterednum);
 
 
         if ($getprice) {
-            echo "<span style='padding:50px;align-self:center;'>$$getprice</span>";
+            echo "<span style='padding:30px;align-self:center;'>$$getprice</span>";
         } else {
             echo "Price not found!!";
         }

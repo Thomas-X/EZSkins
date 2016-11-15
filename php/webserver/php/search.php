@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 //if the cart isn't set to an array already
 if (!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = array();
@@ -14,12 +13,15 @@ if (isset($_GET['id'])) {
     $getvalidid = mysqli_query($connect, "SELECT * FROM skins2 WHERE id='$enteredid'");
     $countvalididrows = mysqli_num_rows($getvalidid);
 
+
     //push the current ID to the cart array, if the ID is valid
     if ($countvalididrows != 0) {
-        $sessioncart = $_SESSION['cart'];
-        $sessiongetid = $_GET['id'];
+//        $sessioncart = $_SESSION['cart'];
+//        $sessiongetid = $_GET['id']; NO, BAD VARIABLE, YOU NO WORK!!! :(
 
-        $arraypush = array_push($sessioncart, $sessiongetid);
+
+
+        $arraypush = array_push($_SESSION['cart'], $_GET['id']);
 
 
         if ($arraypush) {

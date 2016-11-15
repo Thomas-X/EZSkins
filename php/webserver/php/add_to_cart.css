@@ -24,11 +24,36 @@
     box-shadow: 10px 10px 21px -13px rgba(0,0,0,0.75);
 }
 #imgshopitem {
-    width:64px;
-    height:64px;
+    width:128px;
+    height:100%;
 }
 .removeButtonCSS {
+    position:relative;
 }
 .removeButtonCSS:before {
-    content: "\f00d";
+    content: "\25AE";
+    font-family: FontAwesome;
+    left:-5px;
+    position:absolute;
+    top:0;
+}
+#flexleft {
+    display:flex;
+    justify-content:center;
+}
+#flexright {
+    display:flex;
+    justify-content:flex-end;
+}
+#plus, #minus {
+    transition:300ms;
+    color:black;
+    cursor:pointer;
+    font-size:25px;
+}
+#plus:hover, #minus:hover {
+    font-size:27px;
+    transition:300ms;
+    color:gray;
+
 }

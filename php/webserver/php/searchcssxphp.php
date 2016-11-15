@@ -8,8 +8,8 @@ if (isset($_SESSION['username'])) {
     $var2 = "Log out?";
 }
 else {
-    $var1 = "";
-    $var2 = "";
+    $var1 = "Login or Sign up.";
+    $var2 = "Login or Sign up.";
 }
 
 

@@ -15,10 +15,8 @@
     <script src="../js/removeButton.js"></script>
     <script src="../js/gotoCart.js"></script>
 </head>
-<body>
-
-<!--TEMPLATE FOR NAVBAR!!-->
-<nav class="nav" style="">
+<body style="margin-top:75px;">
+<nav class="nav" style="position:fixed;width:100%;top:0px;">
     <div id="navcolor" class="nav-left">
         <a class="nav-item is-brand" href="../../index.html">
             <img id="logoezskins" src="../logo/logo.png" alt="EZSkins logo">
@@ -58,15 +56,15 @@
         </a>
         <?php
 
-if (isset($_SESSION['username'])) {
+        if (isset($_SESSION['username'])) {
 
-    $getusername = $_SESSION['username'];
+            $getusername = $_SESSION['username'];
 
-    echo "<a href='logout.php' id=\"navitemcolor6\" class='nav-item is-noactive'>
-        </a>";
+            echo "<a href='logout.php' id=\"navitemcolor6\" class='nav-item is-noactive'>
+    </a>";
         }
         else {
-        echo "<a href='login.php?lastpage=search.php' id=\"navitemcolor6\" class='nav-item is-noactive'>
+            echo "<a href='login.php?lastpage=search.php' id=\"navitemcolor6\" class='nav-item is-noactive'>
     </a>";
         }
 
@@ -78,8 +76,15 @@ if (isset($_SESSION['username'])) {
 
     </div>
 </nav>
-<div id="redline"> <!-- rood balkje onder nav -->
+<div id="redline" style="position:fixed;width:100%;z-index: 2;"> <!-- rood balkje onder nav -->
 </div>
 <!-- TEMPLATE FOR NAVBAR!!-->
+
+<img style="display:block;" src="https://placekitten.com/400/200">
+<img style="display:block;" src="https://placekitten.com/500/200">
+<img style="display:block;" src="https://placekitten.com/600/300">
+<img style="display:block;" src="https://placekitten.com/700/300">
+<img style="display:block;" src="https://placekitten.com/800/400">
+<img style="display:block;" src="https://placekitten.com/900/400">
 </body>
 </html>

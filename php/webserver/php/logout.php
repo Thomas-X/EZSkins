@@ -5,6 +5,12 @@
  * Date: 11/9/2016
  * Time: 10:07 AM
  */
-session_abort();
+echo "You are being redirected..";
+session_start();
+session_destroy();
+unset($_SESSION['cart']);
+unset($_SESSION['username']);
+unset($_SESSION);
+
 header('Location: login.php');
 ?>

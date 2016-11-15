@@ -1,3 +1,11 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
 .side-nav-frame {
     font-family: 'Ubuntu', sans-serif;
     height: 100%;
@@ -16,4 +24,9 @@
 
 .side-nav-title span {
     font-size: 25px;
+}
+
+.side-nav-form {
+    margin-top: 10px;
+    margin-left: 10px;
 }

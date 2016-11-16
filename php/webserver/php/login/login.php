@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
     }
 } //standard default message, this only changes when the user clicks on login which is nice
 else {
-    $message = "Please log in.";
+    $message = "Please log in";
 }
 
 ?>
@@ -67,19 +67,22 @@ else {
 
 <?php
 $getuserpage = @$_GET['lastpage'];
-echo "<div class=\"login-frame\">
+echo "<div class='flexcontainer'><div class=\"login-frame\">
     <div class=\"login-frame-top\">
-        <span>Login or <a href=\"register.php\">Register</a></span>
+        <span>Login or <a href=\"../register/register.php\">Register</a></span>
+    </div>
+    <div class='login-frame-text'>
+            <label for='loginorinvalid' style='margin-bottom:2px;color: white;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Roboto\", \"Oxygen\", \"Ubuntu\", \"Cantarell\", \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;'>$message</label>
     </div>
     <div class=\"login-frame-form\">
         <form action=\"login.php\" method=\"post\">
-        <label for='loginorinvalid' style='margin-bottom:2px;color: white;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Roboto\", \"Oxygen\", \"Ubuntu\", \"Cantarell\", \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;'>$message</label>
             <input type=\"text\" placeholder=\"Username\" name=\"username\" id=\"login-width\">
             <input type=\"password\" placeholder=\"Password\" name=\"password\" id=\"login-width1\">
             <input type=\"submit\" name=\"submit\" value=\"Login\" id=\"login-button\">
         </form>
     </div>
-</div>";
+</div>
+</div>"; //FLEX CONTAINER
 
 ?>
 

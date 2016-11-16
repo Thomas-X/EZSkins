@@ -1,0 +1,84 @@
+html, body {
+    height: 100%;
+}
+
+.register-frame {
+    width: 25%;
+    margin: 0 auto;
+    background-color: #222225;
+}
+
+.register-frame-top {
+    background-color: #222329;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #EE424B;
+    text-align: center;
+}
+
+.register-frame-top span {
+    color: #EE424B;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+.register-frame-top a {
+    color: #EE424B;
+    text-decoration: underline;
+}
+
+.register-frame-top a:hover {
+    color: #FFFFFf;
+}
+
+.register-frame-form {
+    text-align: center;
+}
+
+
+.register-frame-form form {
+    text-align: center;
+}
+
+#register-width {
+    width: 90%;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    padding:2px 0px 2px 2px;
+}
+
+#register-width1 {
+    width:90%;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    padding:2px 0px 2px 2px;
+}
+
+#register-button {
+    width:100%;
+    border:none;
+    background-color: #EE424B;
+    color: white;
+    padding: 10px 0px 10px 0px;
+    transition: all 300ms;
+}
+
+#register-button:hover {
+    background-color: #d12d2c;
+    transition: all 300ms;
+}
+
+.register-frame-text {
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+}
+
+.register-frame-text span {
+    color: whitesmoke;
+
+}
+
+.register-frame-text span:hover {
+    color: whitesmoke;
+}

@@ -154,13 +154,6 @@ if (isset($_GET['remove'])) {
 
         echo "<div id='flexright' class=\"flex-right\" style='width:49%'>";
 
-        if (@$_GET['removeid'] == 1) {
-            $enterednum++;
-        }
-        if (@$_GET['removeid'] == 0) {
-            $enterednum--;
-        }
-
         if ($getprice) {
             echo "<span style='align-self: center;text-align: center'>Amount: $enterednum <br><a href='add_to_cart.php?removeid=1'><i id='plus' class='fa fa-plus' aria-hidden='true' style='cursor: pointer;'></i></a>   <a href='add_to_cart.php?removeid=0'><i id='minus' class='fa fa-minus' aria-hidden='true' style='cursor: pointer;'></i></a></span>";
         }

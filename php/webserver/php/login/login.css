@@ -32,10 +32,6 @@ html, body {
     color: #FFFFFf;
 }
 
-.login-frame-form {
-    padding-top: 20px;
-}
-
 .login-frame-form form {
     text-align: center;
 }
@@ -67,4 +63,17 @@ html, body {
 #login-button:hover {
     background-color: #d12d2c;
     transition: all 300ms;
+}
+
+.login-frame-text {
+    text-align: center;
+    padding: 10px 0 10px 0;
+}
+
+.login-frame-text span {
+    color: whitesmoke;
+}
+
+.login-frame-text span:hover {
+    color: whitesmoke;
 }

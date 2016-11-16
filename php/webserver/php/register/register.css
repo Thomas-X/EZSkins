@@ -25,15 +25,11 @@ html, body {
 
 .register-frame-top a {
     color: #EE424B;
-    text-decoration: dotted;
+    text-decoration: underline;
 }
 
 .register-frame-top a:hover {
     color: #FFFFFf;
-}
-
-.register-frame-form {
-    padding-top: 20px;
 }
 
 .register-frame-form form {
@@ -44,19 +40,19 @@ html, body {
     width: 90%;
     margin-bottom: 10px;
     border-radius: 2px;
-    padding:2px 0px 2px 2px;
+    padding: 2px 0px 2px 2px;
 }
 
 #register-width1 {
-    width:90%;
+    width: 90%;
     margin-bottom: 20px;
     border-radius: 2px;
-    padding:2px 0px 2px 2px;
+    padding: 2px 0px 2px 2px;
 }
 
 #register-button {
-    width:100%;
-    border:none;
+    width: 100%;
+    border: none;
     background-color: #EE424B;
     color: white;
     padding: 10px 0px 10px 0px;
@@ -66,4 +62,17 @@ html, body {
 #register-button:hover {
     background-color: #d12d2c;
     transition: all 300ms;
+}
+
+.register-frame-text {
+    text-align: center;
+    padding: 10px 0 10px 0;
+}
+
+.register-frame-text span {
+    color: whitesmoke;
+}
+
+.register-frame-text span:hover {
+    color: whitesmoke;
 }

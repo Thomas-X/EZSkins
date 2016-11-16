@@ -41,7 +41,7 @@ else {
 
 <div class="register-frame">
     <div class="register-frame-top">
-        <span>Register or <a href="../login.php">Login</a></span>
+        <span>Register or <a href="../login/login.php">Login</a></span>
     </div>
     <div class="register-frame-text">
         <?php echo "<span id='message'>$message</span>";
@@ -53,7 +53,6 @@ else {
             <input type="text" name="username" placeholder="Username" id="register-width">
             <input type="password" name="password" placeholder="Password" id="register-width1">
             <input type="submit" name="submit" value="Register" id="register-button">
-
         </form>
     </div>
 </div>

@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
     }
 } //standard default message, this only changes when the user clicks on login which is nice
 else {
-    $message = "Please log in.";
+    $message = "Please log in";
 }
 
 ?>
@@ -67,7 +67,7 @@ else {
 
 <?php
 $getuserpage = @$_GET['lastpage'];
-echo "<div class=\"login-frame\">
+echo "<div class='flexcontainer'><div class=\"login-frame\">
     <div class=\"login-frame-top\">
         <span>Login or <a href=\"../register/register.php\">Register</a></span>
     </div>
@@ -81,7 +81,8 @@ echo "<div class=\"login-frame\">
             <input type=\"submit\" name=\"submit\" value=\"Login\" id=\"login-button\">
         </form>
     </div>
-</div>";
+</div>
+</div>"; //FLEX CONTAINER
 
 ?>
 

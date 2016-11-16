@@ -61,6 +61,7 @@ html, body {
     color: white;
     padding: 10px 0px 10px 0px;
     transition: all 300ms;
+    cursor:pointer;
 }
 
 #login-button:hover {

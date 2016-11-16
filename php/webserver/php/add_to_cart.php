@@ -106,6 +106,16 @@ if (isset($_GET['remove'])) {
     $counter = 0;
     $buttonstoadd = count($_SESSION['cart']);
 
+    $sum = 0;
+
+    echo "<div class='shopcartColumn'>
+    <span class='3'>Price</span>
+        <span id='2'>Amount</span>
+    <span id='1'>Name</span>
+
+
+</div>";
+
 
     foreach ($arrayfinal as $counter) {
 
@@ -129,6 +139,7 @@ if (isset($_GET['remove'])) {
         $getprice2 = mysqli_query($connect, "SELECT price FROM skins WHERE id='$counter'");
         $getpricearray = mysqli_fetch_assoc($getprice2);
         $getprice = $getpricearray['price'];
+
 
         //echo container
         echo "
@@ -154,15 +165,12 @@ if (isset($_GET['remove'])) {
 
         echo "<div id='flexright' class=\"flex-right\" style='width:49%'>";
 
-        if (@$_GET['removeid'] == 1) {
-            $enterednum++;
-        }
-        if (@$_GET['removeid'] == 0) {
-            $enterednum--;
-        }
+
+
+        $sum += $enterednum * $getprice;
 
         if ($getprice) {
-            echo "<span style='align-self: center;text-align: center'>Amount: $enterednum <br><a href='add_to_cart.php?removeid=1'><i id='plus' class='fa fa-plus' aria-hidden='true' style='cursor: pointer;'></i></a>   <a href='add_to_cart.php?removeid=0'><i id='minus' class='fa fa-minus' aria-hidden='true' style='cursor: pointer;'></i></a></span>";
+            echo "<span style='align-self: center;text-align: center'>Amount: $enterednum </span>";
         }
 //    var_dump($enterednum);
 
@@ -174,10 +182,9 @@ if (isset($_GET['remove'])) {
         }
         //echo delete button
         echo "<form method='get' style='width: 45px;align-self:center;'><button id='$counter' class='button is-danger' type='submit' name='remove' value='$counter' onclick='removeButton(this.id)'>X</button></form>
-    
     </div>";
         echo "</div>";
-
+        var_dump($sum);
         $counter++;
     }
     ?>

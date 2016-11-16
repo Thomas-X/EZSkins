@@ -70,6 +70,7 @@ if (isset($_GET['remove'])) {
     <link rel="stylesheet" href="css/faq.css">
     <link rel="stylesheet" href="searchcssxphp.php">
     <link rel="stylesheet" href="add_to_cart.css">
+    <link rel="stylesheet" href="add_to_cartCSSxPHP.php">
 
     <script src="js/toggleNav.js"></script>
     <script src="js/loadFunc.js"></script>
@@ -78,8 +79,72 @@ if (isset($_GET['remove'])) {
     <script src="js/gotoCart.js"></script>
     <!--    <script src="js/addamounttoCart.js"></script>-->
 </head>
-<body>
+<body style="margin-top:75px;">
+<nav class="nav" style="position:fixed;width:100%;top:0px;">
+    <div id="navcolor" class="nav-left">
+        <a class="nav-item is-brand" href="../../index.html">
+            <img id="logoezskins" src="logo/logo.png" alt="EZSkins logo">
+        </a>
+    </div>
 
+    <div id="navcolor" class="nav-center">
+        <a class="nav-item" href="https://github.com/Thomas-X/EZSkins" target="_blank">
+      <span class="icon">
+        <i id="githubicon" class="fa fa-github fa-inverse"></i>
+      </span>
+        </a>
+    </div>
+
+    <span id="nav-toggle" class="nav-toggle" onclick="togglefunction()">
+        <span id="spans"></span>
+        <span id="spans"></span>
+        <span id="spans"></span>
+    </span>
+
+
+    <div id="nav-menu" class="nav-right nav-menu" style="background-color:#222329;padding:0;">
+        <?php
+
+        if (isset($_SESSION['username'])) {
+
+            $getusername = $_SESSION['username'];
+
+            echo "<a href='logout.php' id=\"navitemcolor6\" class='nav-item is-noactive'>
+    </a>";
+        }
+        else {
+            echo "<a href='login.php?lastpage=search.php' id=\"navitemcolor6\" class='nav-item is-noactive'>
+    </a>";
+        }
+
+        ?>
+        <a id="navitemcolor1" class="nav-item is-noactive" href="../webshop/webshop.html">
+            Shop
+        </a>
+        <a id="navitemcolor2" class="nav-item is-noactive" href="../news/news.html">
+            News
+        </a>
+        <a id="navitemcolor3" class="nav-item is-noactive" href="../about/about.html">
+            About
+        </a>
+        <a id="navitemcolor4" class="nav-item is-noactive" href="faq.html">
+            FAQ
+        </a>
+        <a id="navitemcolor5" class="nav-item is-noactive" href="../contact/contact.html">
+            Contact
+        </a>
+        <?php
+
+        echo "<i id='shoppingCart' onclick='gotoCart()' class=\"fa fa-shopping-cart nav-item\" aria-hidden=\"true\"></i>"
+
+
+        ?>
+
+
+    </div>
+</nav>
+<div id="redline" style="position:fixed;width:100%;z-index: 2;"> <!-- rood balkje onder nav -->
+</div>
 <div class="cartContainer">
     <p id="title">Your Shoppingcart<?php if (isset($_SESSION['username'])) {
             $var1 = $_SESSION['username'];
@@ -91,11 +156,9 @@ if (isset($_GET['remove'])) {
     <?php
 
 
-
     $countarray = array_count_values($_SESSION['cart']);
-    var_dump($countarray);
+
     $arraykeys2 = array_keys($countarray);
-    var_dump($arraykeys2);
 
 
 
@@ -109,18 +172,20 @@ if (isset($_GET['remove'])) {
     $sum = 0;
 
     echo "<div class='shopcartColumn'>
-    <span class='3'>Price</span>
-        <span id='2'>Amount</span>
-    <span id='1'>Name</span>
-
-
+<div class='flexleft'>
+    <span class='span1'>Name</span>
+    </div>
+    <div class='flexright'>
+        <span class='span2'>Amount</span>
+    <span class='span3'>Price</span>
+</div>
 </div>";
 
 
     foreach ($arrayfinal as $counter) {
 
         $enterednum = $countarray[$counter];
-        var_dump($counter);
+
 
         //connect to db
         $connect = mysqli_connect("localhost", "root", "admin", "ezskins");
@@ -166,13 +231,12 @@ if (isset($_GET['remove'])) {
         echo "<div id='flexright' class=\"flex-right\" style='width:49%'>";
 
 
-
         $sum += $enterednum * $getprice;
 
         if ($getprice) {
             echo "<span style='align-self: center;text-align: center'>Amount: $enterednum </span>";
         }
-//    var_dump($enterednum);
+
 
 
         if ($getprice) {
@@ -184,9 +248,9 @@ if (isset($_GET['remove'])) {
         echo "<form method='get' style='width: 45px;align-self:center;'><button id='$counter' class='button is-danger' type='submit' name='remove' value='$counter' onclick='removeButton(this.id)'>X</button></form>
     </div>";
         echo "</div>";
-        var_dump($sum);
         $counter++;
     }
+    echo "<div style=\"margin-top:5px;width:100%;display:flex;background-color:#F2F1EF;border-radius:3px;padding:5px;\"><span id='spantotal'>Total:</span><span id='spantotal2' style='align-self: flex-end'>  $$sum</span> </div>"
     ?>
 
 

@@ -1,7 +1,9 @@
 .cartContainer {
     width:45%;
-    margin:auto;
-
+    margin-top:35px;
+    min-width:483px;
+    max-width:483px;
+    /*margin-top:20px;*/
 }
 #title {
     /*position:relative;*/
@@ -14,7 +16,7 @@
     margin-top:10px;
     border-radius: 4px;
     width:100%;
-    background-color: #8a9c9d;
+    background-color: #F2F1EF;
     padding:20px;
     display:flex;
     /*justify-content:center;*/
@@ -61,11 +63,42 @@
     justify-content: center;
 }
 .shopcartColumn span {
-    color: white !important;
+    color: #17252f;
+
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     font-size: 20px;
     padding:20px;
+
 }
-#3 {
-    padding-right:5px;
+.span1 {
+    margin-left:40px;
+    border-left:2px solid #17252f;
+    border-right:2px solid #17252f;
+
+}
+.span2 {
+    border-right:2px solid #17252f;
+
+}
+.flexleft {
+
+    display:flex;
+    justify-content:flex-end;
+    width:50%;
+    background-color:#F2F1EF;
+}
+.flexright {
+    color: #2C3E50;
+    display:flex;
+    justify-content:flex-start;
+    width:50%;
+    background-color:#F2F1EF;
+}
+.span3 {
+    margin-right:20px;
+    border-right:2px solid #17252f;
+}
+body {
+    display:flex;
+    justify-content:center;
 }

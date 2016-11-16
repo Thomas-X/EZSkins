@@ -38,7 +38,7 @@ else {
     <link rel="stylesheet" href="bulma.css">
 </head>
 <body>
-
+<div class='flexcontainer'>
 <div class="register-frame">
     <div class="register-frame-top">
         <span>Register or <a href="../login/login.php">Login</a></span>
@@ -56,6 +56,7 @@ else {
         </form>
     </div>
 </div>
+</div> //FLEX CONTAINER
 
 </body>
 </html>

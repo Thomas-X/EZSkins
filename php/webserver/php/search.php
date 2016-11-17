@@ -131,7 +131,7 @@ if (isset($_GET['remove'])) {
             echo "<a href='logout.php' id=\"navitemcolor6\" class='nav-item is-noactive'>
     </a>";
         } else {
-            echo "<a href='login.php?lastpage=search.php' id=\"navitemcolor6\" class='nav-item is-noactive'>
+            echo " class='nav-item is-noactive'>
         
     </a>";
         }

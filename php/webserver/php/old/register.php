@@ -26,37 +26,30 @@ if (isset($_POST['submit'])) {
     }
 } //submission failed, something wrong with user input
 else {
-    $message = "Please register";
+    $message = "Please register.";
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Register Page</title>
-    <link rel="stylesheet" href="register.css">
-    <link rel="stylesheet" href="bulma.css">
+    <title>halp</title>
 </head>
 <body>
-<div class='flexcontainer'>
-<div class="register-frame">
-    <div class="register-frame-top">
-        <span>Register or <a href="../login/login.php">Login</a></span>
-    </div>
-    <div class="register-frame-text">
-        <?php echo "<span id='message'>$message</span>";
-        ?>
-    </div>
+<form action="register.php" method="post">
+    Username: <input type="text" name="username" value="">
+    <br>
+    Password: <input type="password" name="password" value="">
+    <br>
+    Register <input type="submit" name="submit" value="Submit">
+</form>
 
-    <div class="register-frame-form">
-        <form action="register.php" method="post">
-            <input type="text" name="username" placeholder="Username" id="register-width">
-            <input type="password" name="password" placeholder="Password" id="register-width1">
-            <input type="submit" name="submit" value="Register" id="register-button">
-        </form>
-    </div>
-</div>
-</div> //FLEX CONTAINER
+<?php echo $message;
+?>
+<br><a href="login.php">Already registered?</a>
 
+
+//TODO MAKE MD5 ENCRYPTION WITH PHP AND MAYBE LOGIN ISN'T NEEDED? CART WITH $_SESSION
 </body>
 </html>
+

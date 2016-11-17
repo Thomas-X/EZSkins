@@ -34,14 +34,12 @@ if (isset($_POST['submit'])) {
     if ($validentry === true) {
         $message = "Logging in.."; //logging-y stuff
 
-        if (isset($_GET['lastpage'])) {
-            $getlastpage = $_GET['lastpage'];
+        $getlastpage = $_GET['lastpage'];
+        //setting current user session
+        $_SESSION['username'] = $username;
+        header("Location: $getlastpage");
+        exit();
 
-            //setting current user session
-            $_SESSION['username'] = $username;
-            header("Location: $getlastpage");
-            exit();
-        }
 
 //TODO MAKE MD5 ENCRYPTION WITH PHP AND MAYBE LOGIN ISN'T NEEDED? CART WITH $_SESSION
         //if the user entered incorrect data, we say bad user!
@@ -51,41 +49,30 @@ if (isset($_POST['submit'])) {
     }
 } //standard default message, this only changes when the user clicks on login which is nice
 else {
-    $message = "Please log in";
+    $message = "Please log in.";
 }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="../../css/bulma.css">
+    <title>Login</title>
 </head>
 <body>
-
 <?php
 $getuserpage = @$_GET['lastpage'];
-echo "<div class='flexcontainer'><div class=\"login-frame\">
-    <div class=\"login-frame-top\">
-        <span>Login or <a href=\"../register/register.php\">Register</a></span>
-    </div>
-    <div class='login-frame-text'>
-            <label for='loginorinvalid' style='margin-bottom:2px;color: white;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Roboto\", \"Oxygen\", \"Ubuntu\", \"Cantarell\", \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;'>$message</label>
-    </div>
-    <div class=\"login-frame-form\">
-        <form action=\"login.php\" method=\"post\">
-            <input type=\"text\" placeholder=\"Username\" name=\"username\" id=\"login-width\">
-            <input type=\"password\" placeholder=\"Password\" name=\"password\" id=\"login-width1\">
-            <input type=\"submit\" name=\"submit\" value=\"Login\" id=\"login-button\">
-        </form>
-    </div>
-</div>
-</div>"; //FLEX CONTAINER
+echo "<form action=\"login.php?lastpage=$getuserpage\" method=\"post\">
+    Username: <input type=\"text\" name=\"username\"><br>
+    Password: <input type=\"password\" name=\"password\"><br>
+    Login: <input type=\"submit\" name=\"submit\" value=\"Login\">
+</form>";
 
+
+
+echo $message;
 ?>
-
-
+<br><a href="register.php">Not registered yet?</a>
 </body>
 </html>

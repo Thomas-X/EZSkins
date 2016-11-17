@@ -1,9 +1,9 @@
 /*start item frame*/
 .item-frame {
 
-
+    background-color: rgba( 22, 22, 25, 0.2);
     /*height: 370px;*/
-    background-color: #222329;
+
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
     margin:9px;
@@ -90,8 +90,21 @@
     align-items:stretch;
 }
 html {
-    background-color: #161619 !important;
+    background-image: url("shopbg.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+body {
+    background-image: url("shopbg.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 /*@media screen and (min-width:1806px) {*/
     /*#buttonInput {*/

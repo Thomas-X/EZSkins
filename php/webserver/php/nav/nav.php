@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="nav.css">
-    <link rel="stylesheet" href="navphpXcss.php">
-    <link rel="stylesheet" href="font-awesome.css">
+    <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="bulma.css">
+    <link rel="stylesheet" href="nav/nav.css">
+    <link rel="stylesheet" href="nav/navphpXcss.php">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/bulma.css">
+
 
 
     <script src="../js/toggleNav.js"></script>
@@ -39,6 +42,20 @@
 
 
     <div id="nav-menu" class="nav-right nav-menu" style="background-color:#222329;padding:0;">
+        <?php
+
+        if (isset($_SESSION['username'])) {
+
+            $getusername = $_SESSION['username'];
+
+            echo "<a href='logout.php' id=\"navitemcolor6\" class='nav-item is-noactive'>
+    </a>";
+        }
+        else {
+            echo "<a href='login.php?lastpage=search.php' id=\"navitemcolor6\" class='nav-item is-noactive'>
+    </a>";
+        }
+        ?>
         <a id="navitemcolor1" class="nav-item is-noactive" href="../webshop/webshop.html">
             Shop
         </a>
@@ -56,17 +73,6 @@
         </a>
         <?php
 
-        if (isset($_SESSION['username'])) {
-
-            $getusername = $_SESSION['username'];
-
-            echo "<a href='logout.php' id=\"navitemcolor6\" class='nav-item is-noactive'>
-    </a>";
-        }
-        else {
-            echo "<a href='login.php?lastpage=search.php' id=\"navitemcolor6\" class='nav-item is-noactive'>
-    </a>";
-        }
 
         echo "<i id='shoppingCart' onclick='gotoCart()' class=\"fa fa-shopping-cart nav-item\" aria-hidden=\"true\"></i>"
 

@@ -170,6 +170,18 @@ $getsearch2 = @$_GET['search'];
 $getpage = 0;
 
 
+
+echo "<div class='flex-container'>";
+
+//post template stuff here
+
+
+
+
+//stuff end here
+
+
+
 if (@$_POST['submit']) {
     header("Location: search.php?page=$getpage&search=$getsearch");
 }
@@ -233,17 +245,16 @@ if (isset($_GET['page']) && isset($_GET['search']) && ($_GET['search'] != '')) {
     }
     $getcurrentpage = @$_GET['page'];
     $getcurrentpagemath = $getcurrentpage + 1;
-    echo "<div class='flex-container'>";
+
     if ($boolean) {
         echo "<span style='color: #fffbeb;font-size: 8vh;margin: 20px;'>No results found! :(</span>";
     }
     if ($output) {
+//        echo "<script>document.getElementsByClassName('mainpagecontainer').style.display = ''</script>";
         echo $output;
     }
-    echo "</div>";
-
-
 }
+echo "</div>";
 
 //echo "<form action=\"search.php?page=$getcurrentpagemath\" method=\"post\">
 //    <input name=\"search\" type=\"text\">

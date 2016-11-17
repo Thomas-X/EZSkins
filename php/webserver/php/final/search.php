@@ -84,10 +84,10 @@ if (isset($_GET['remove'])) {
     </title>
     <link rel="stylesheet" href="search.css">
     <link rel="stylesheet" href="sideNav/index.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/font-awesome.css">
-    <link rel="stylesheet" href="css/bulma.css">
-    <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="final/css/font-awesome.min.css">
+    <link rel="stylesheet" href="final/css/font-awesome.css">
+    <link rel="stylesheet" href="final/css/bulma.css">
+    <link rel="stylesheet" href="final/css/faq.css">
     <link rel="stylesheet" href="searchcssxphp.php">
 
     <script src="js/toggleNav.js"></script>
@@ -131,7 +131,7 @@ if (isset($_GET['remove'])) {
             echo "<a href='logout.php' id=\"navitemcolor6\" class='nav-item is-noactive'>
     </a>";
         } else {
-            echo "<a href='login.php?lastpage=search.php' id=\"navitemcolor6\" class='nav-item is-noactive'>
+            echo " class='nav-item is-noactive'>
         
     </a>";
         }

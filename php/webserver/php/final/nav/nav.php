@@ -59,16 +59,16 @@
         <a id="navitemcolor1" class="nav-item is-noactive" href="../webshop/webshop.html">
             Shop
         </a>
-        <a id="navitemcolor2" class="nav-item is-noactive" href="../news/news.html">
+        <a id="navitemcolor2" class="nav-item is-noactive" href="../pages/news/news.html">
             News
         </a>
-        <a id="navitemcolor3" class="nav-item is-noactive" href="../about/about.html">
+        <a id="navitemcolor3" class="nav-item is-noactive" href="../final/about/about.html">
             About
         </a>
         <a id="navitemcolor4" class="nav-item is-noactive" href="faq.html">
             FAQ
         </a>
-        <a id="navitemcolor5" class="nav-item is-noactive" href="../contact/contact.html">
+        <a id="navitemcolor5" class="nav-item is-noactive" href="../final/contact/contact.html">
             Contact
         </a>
         <?php

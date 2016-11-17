@@ -48,8 +48,8 @@ else {
     <link rel="stylesheet" href="bulma.css">
     <link rel="stylesheet" href="nav/nav.css">
     <link rel="stylesheet" href="nav/navphpXcss.php">
-    <link rel="stylesheet" href="final/css/font-awesome.css">
-    <link rel="stylesheet" href="final/css/bulma.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/bulma.css">
 
     <script src="js/toggleNav.js"></script>
     <script src="js/loadFunc.js"></script>

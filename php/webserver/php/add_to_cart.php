@@ -64,10 +64,10 @@ if (isset($_GET['remove'])) {
     <title>Current shopping cart</title>
     <link rel="stylesheet" href="search.css">
     <link rel="stylesheet" href="sideNav/index.css">
-    <link rel="stylesheet" href="final/css/font-awesome.min.css">
-    <link rel="stylesheet" href="final/css/font-awesome.css">
-    <link rel="stylesheet" href="final/css/bulma.css">
-    <link rel="stylesheet" href="final/css/faq.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/bulma.css">
+    <link rel="stylesheet" href="css/faq.css">
     <link rel="stylesheet" href="searchcssxphp.php">
     <link rel="stylesheet" href="add_to_cart.css">
     <link rel="stylesheet" href="add_to_cartCSSxPHP.php">

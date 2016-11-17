@@ -18,7 +18,7 @@ else {
 </head>
 <body>
 
-<a href="../logout.php">Log out</a>
+<a href="logout.php">Log out</a>
 <h1>TODO IMPROVE LOGOUT BY CLOSING SESSION ASWELL</h1>
 
 </body>

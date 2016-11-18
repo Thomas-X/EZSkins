@@ -44,8 +44,8 @@ else {
 <head>
     <meta charset="UTF-8">
     <title>Login Page</title>
-    <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="bulma.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/bulma.css">
     <link rel="stylesheet" href="nav/nav.css">
     <link rel="stylesheet" href="nav/navphpXcss.php">
     <link rel="stylesheet" href="css/font-awesome.css">
@@ -90,7 +90,7 @@ else {
     </a>";
         }
         else {
-            echo "<a href='login.php?lastpage=search.php' id=\"navitemcolor6\" class='nav-item is-noactive'>
+            echo "<a href='index.php' id=\"navitemcolor6\" class='nav-item is-noactive'>
     </a>";
         }
         ?>
@@ -100,7 +100,7 @@ else {
         <a id="navitemcolor2" class="nav-item is-noactive" href="../news/news.html">
             News
         </a>
-        <a id="navitemcolor3" class="nav-item is-noactive" href="../about/about.html">
+        <a id="navitemcolor3" class="nav-item is-noactive" href="../about/about.php">
             About
         </a>
         <a id="navitemcolor4" class="nav-item is-noactive" href="faq.html">
@@ -125,7 +125,7 @@ else {
 </div>
 
 <?php
-$getuserpage = @$_GET['lastpage'];
+//$getuserpage = @$_GET['lastpage'];
 echo "<div class='flexcontainer'><div class=\"login-frame\">
     <div class=\"login-frame-top\">
         <span>Login or <a href=\"register.php\">Register</a></span>

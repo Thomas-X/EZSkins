@@ -82,7 +82,7 @@ if (isset($_GET['remove'])) {
     <title>
         Search
     </title>
-    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="css/search.css">
     <link rel="stylesheet" href="sideNav/index.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/font-awesome.css">
@@ -142,7 +142,7 @@ if (isset($_GET['remove'])) {
         <a id="navitemcolor2" class="nav-item is-noactive" href="../news/news.html">
             News
         </a>
-        <a id="navitemcolor3" class="nav-item is-noactive" href="../about/about.html">
+        <a id="navitemcolor3" class="nav-item is-noactive" href="../about/about.php">
             About
         </a>
         <a id="navitemcolor4" class="nav-item is-noactive" href="faq.html">

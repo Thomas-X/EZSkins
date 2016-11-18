@@ -1,0 +1,29 @@
+<?php
+/**
+ * Created by IntelliJ IDEA.
+ * User: Thomas X
+ * Date: 11/10/2016
+ * Time: 6:08 PM
+ */
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+////
+////           TODO: THIS SCRIPT IS EXTREMELY DANGEROUS, DO NOT GO TO PAGE UNLESS CERTAIN
+////
+////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
+////
+////           TODO: THIS SCRIPT IS EXTREMELY DANGEROUS, DO NOT GO TO PAGE UNLESS CERTAIN
+////
+////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//
+//$connect = mysqli_connect("localhost", "root", "admin", "ezskins");
+//$query = mysqli_query($connect, "SELECT * FROM skins");
+//$count = mysqli_num_rows($query);
+//var_dump($count);
+//
+//for ($counter = 0; $counter < $count; $counter++) {
+//    mysqli_query($connect, "UPDATE skins SET id='$counter' WHERE id='$counter'");
+//    $counter++;
+//}

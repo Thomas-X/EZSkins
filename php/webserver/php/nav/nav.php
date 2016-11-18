@@ -21,7 +21,7 @@
 <body style="margin-top:75px;">
 <nav class="nav" style="position:fixed;width:100%;top:0px;">
     <div id="navcolor" class="nav-left">
-        <a class="nav-item is-brand" href="../../index.html">
+        <a class="nav-item is-brand" href="../../index.php">
             <img id="logoezskins" src="../logo/logo.png" alt="EZSkins logo">
         </a>
     </div>

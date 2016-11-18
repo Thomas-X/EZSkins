@@ -34,8 +34,8 @@ else {
 <head>
     <meta charset="UTF-8">
     <title>Register Page</title>
-    <link rel="stylesheet" href="register.css">
-    <link rel="stylesheet" href="bulma.css">
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/bulma.css">
     <link rel="stylesheet" href="nav/nav.css">
     <link rel="stylesheet" href="nav/navphpXcss.php">
     <link rel="stylesheet" href="css/font-awesome.css">
@@ -90,7 +90,7 @@ else {
         <a id="navitemcolor2" class="nav-item is-noactive" href="../news/news.html">
             News
         </a>
-        <a id="navitemcolor3" class="nav-item is-noactive" href="../about/about.html">
+        <a id="navitemcolor3" class="nav-item is-noactive" href="../about/about.php">
             About
         </a>
         <a id="navitemcolor4" class="nav-item is-noactive" href="faq.html">

@@ -1,6 +1,16 @@
+html, body {
+    height: 100%;
+    background-image: url("../../php/shopbg.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background-color: rgba( 22, 22, 25, 1);*/
+}
 body {
     margin: 0;
-    background-color: #161619;
+    background-color: rgba( 22, 22, 25, 0.2) !important;
+    /*background-color: #161619;*/
 }
 
 .wrapper {
@@ -146,7 +156,7 @@ iframe {
 
 /*FOOTER */
 .footer {
-    background-color: #161619;
+    background-color: rgba( 22, 22, 25, 0.2);
     color: #fffbeb;
     border-bottom-color: transparent;
 }
@@ -187,7 +197,8 @@ iframe {
     -webkit-animation-duration: 0.85s;
     animation-name: animatebottom;
     animation-duration: 0.85s;
-    background-color:#161619;
+    background-color: rgba( 22, 22, 25, 0.2);
+    height:100%;
 }
 
 @-webkit-keyframes animatebottom {

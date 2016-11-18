@@ -21,14 +21,16 @@ if (isset($_POST['submit'])) {
     //if we found a password the user entered, set passwordvalid to true
     //only if both usernamevalid AND passwordvalid == true
     if ($validentry === true) {
+        $_SESSION['username'] = $username;
         $message = "Logging in.."; //logging-y stuff
-        if (isset($_GET['lastpage'])) {
-            $getlastpage = $_GET['lastpage'];
-            //setting current user session
-            $_SESSION['username'] = $username;
-            header("Location: $getlastpage");
-            exit();
-        }
+        header('Location: ../index.php');
+//        if (isset($_GET['lastpage'])) {
+//            $getlastpage = $_GET['lastpage'];
+//            //setting current user session
+
+//            header("Location: $getlastpage");
+//            exit();
+
 //TODO MAKE MD5 ENCRYPTION WITH PHP AND MAYBE LOGIN ISN'T NEEDED? CART WITH $_SESSION
         //if the user entered incorrect data, we say bad user!
     } else {
@@ -55,12 +57,11 @@ else {
     <script src="js/loadFunc.js"></script>
     <script src="js/button1.js"></script>
     <script src="js/removeButton.js"></script>
-    <script src="js/gotoCart.js"></script>
 </head>
 <body style="margin-top:75px;">
 <nav class="nav" style="position:fixed;width:100%;top:0px;">
     <div id="navcolor" class="nav-left">
-        <a class="nav-item is-brand" href="../../index.html">
+        <a class="nav-item is-brand" href="../../index.php">
             <img id="logoezskins" src="logo/logo.png" alt="EZSkins logo">
         </a>
     </div>
@@ -88,31 +89,34 @@ else {
 
             echo "<a href='logout.php' id=\"navitemcolor6\" class='nav-item is-noactive'>
     </a>";
-        }
-        else {
-            echo "<a href='index.php' id=\"navitemcolor6\" class='nav-item is-noactive'>
+        } else {
+            echo "<a href='../index.php' id=\"navitemcolor6\" class='nav-item is-noactive'>
     </a>";
         }
         ?>
-        <a id="navitemcolor1" class="nav-item is-noactive" href="../webshop/webshop.html">
+        <a id="navitemcolor1" class="nav-item is-noactive" href="search2.php">
             Shop
         </a>
-        <a id="navitemcolor2" class="nav-item is-noactive" href="../news/news.html">
+        <a id="navitemcolor2" class="nav-item is-noactive" href="../news/news.php">
             News
         </a>
         <a id="navitemcolor3" class="nav-item is-noactive" href="../about/about.php">
             About
         </a>
-        <a id="navitemcolor4" class="nav-item is-noactive" href="faq.html">
+        <a id="navitemcolor4" class="nav-item is-noactive" href="../faq/faq.php">
             FAQ
         </a>
-        <a id="navitemcolor5" class="nav-item is-noactive" href="../contact/contact.html">
+        <a id="navitemcolor5" class="nav-item is-noactive" href="../contact/contact.php">
             Contact
         </a>
+
+
+        <script>
+        function gotoCart() {
+            window.location = "add_to_cart.php";
+        }
+        </script>
         <?php
-
-
-
         echo "<i id='shoppingCart' onclick='gotoCart()' class=\"fa fa-shopping-cart nav-item\" aria-hidden=\"true\"></i>"
 
 

@@ -10,6 +10,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 <!--    <script src="../php/js/loadFunc.js"></script>-->
     <script src="../php/js/toggleNav.js"></script>
+    <script src="../php/js/loadFunc.js"></script>
+    <script src="../php/js/button1.js"></script>
+    <script src="../php/js/removeButton.js"></script>
+    <link rel="stylesheet" href="../php/css/font-awesome.css">
+    <script src="../php/js/toggleNav.js"></script>
+    <script src="../php/js/loadFunc.js"></script>
+    <script src="../php/js/button1.js"></script>
+    <link rel="stylesheet" href="../php/sideNav/index.css">
+    <link rel="stylesheet" href="../php/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../php/css/font-awesome.css">
+    <link rel="stylesheet" href="../php/css/bulma.css">
+    <!--    <link rel="stylesheet" href="php/css/faq.css">-->
+    <link rel="stylesheet" href="../php/searchcssxphp.php">
 </head>
 
 
@@ -51,21 +64,27 @@
     </a>";
         }
         ?>
-        <a id="navitemcolor1" class="nav-item is-noactive" href="search2.php">
+        <a id="navitemcolor1" class="nav-item is-noactive" href="../php/search2.php">
             Shop
         </a>
-        <a id="navitemcolor2" class="nav-item is-noactive" href="../news/news.html">
+        <a id="navitemcolor2" class="nav-item is-noactive" href="../news/news.php">
             News
         </a>
         <a id="navitemcolor3" class="nav-item is-noactive" href="about.php">
             About
         </a>
-        <a id="navitemcolor4" class="nav-item is-noactive" href="../faq/faq.html">
+        <a id="navitemcolor4" class="nav-item is-noactive" href="../faq/faq.php">
             FAQ
         </a>
-        <a id="navitemcolor5" class="nav-item is-noactive" href="../contact/contact.html">
+        <a id="navitemcolor5" class="nav-item is-noactive" href="../contact/contact.php">
             Contact
         </a>
+
+        <script>
+            function gotoCart() {
+                window.location = "../php/add_to_cart.php";
+            }
+        </script>
 
         <?php
         echo "<i id='shoppingCart' onclick='gotoCart()' class=\"fa fa-shopping-cart nav-item\" aria-hidden=\"true\"></i>"
@@ -142,15 +161,15 @@
                                 <strong>EZSkins</strong><a style="color: white;" id="footertekst"> by Thomas Zwarts & Barry Willems. </a>
                             </p>
                             <p>
-                                <a class="icon" id="iconbot" href="../../pages/webshop/webshop.html">
+                                <a class="icon" id="iconbot" href="../php/search2.php">
                                     <i class="fa fa-shopping-cart"></i></a>
-                                <a class="icon" id="iconbot" href="../../pages/news/news.html">
+                                <a class="icon" id="iconbot" href="../news/news.php">
                                     <i class="fa fa-newspaper-o"></i></a>
-                                <a class="icon" id="iconbot" href="../../pages/about/about.html">
+                                <a class="icon" id="iconbot" href="../about/about.php">
                                     <i class="fa fa-question-circle"></i></a>
-                                <a class="icon" id="iconbot" href="../../pages/faq/faq.html">
+                                <a class="icon" id="iconbot" href="../faq/faq.php">
                                     <i class="fa fa-comment"></i></a>
-                                <a class="icon" id="iconbot" href="../../pages/contact/contact.html">
+                                <a class="icon" id="iconbot" href="../contact/contact.php">
                                     <i class="fa fa-address-card-o"></i></a>
                             </p>
                         </div>

@@ -4,33 +4,34 @@
     <meta charset="UTF-8">
     <title>FAQ</title>
 
-    <link rel="stylesheet" href="css/faq.css"/>
-    <link rel="stylesheet" href="../../css/bulma.css"/>
-    <link rel="stylesheet" href="../../css/font-awesome.css"/>
-    <script src="../../js/loadFunc.js"></script>
-    <script src="../../js/toggleNav.js"></script>
+
+    <link rel="stylesheet" href="../php/css/bulma.css">
+    <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="../php/css/font-awesome.css">
+    <link rel="stylesheet" href="../php/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!--    <script src="../php/js/loadFunc.js"></script>-->
+    <script src="../php/js/toggleNav.js"></script>
+    <script src="../php/js/loadFunc.js"></script>
+    <script src="../php/js/button1.js"></script>
+    <script src="../php/js/removeButton.js"></script>
+    <link rel="stylesheet" href="../php/css/font-awesome.css">
+    <script src="../php/js/toggleNav.js"></script>
+    <script src="../php/js/loadFunc.js"></script>
+    <script src="../php/js/button1.js"></script>
+    <link rel="stylesheet" href="../php/sideNav/index.css">
+    <link rel="stylesheet" href="../php/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../php/css/font-awesome.css">
+    <link rel="stylesheet" href="../php/css/bulma.css">
+    <!--    <link rel="stylesheet" href="php/css/faq.css">-->
+    <link rel="stylesheet" href="../php/searchcssxphp.php">
 </head>
 
-<div id="loaderawesomeness" class="loader2" style="display:flex; justify-content: center;transition:300ms;">
-
-
-    <span class="fa-stack fa-lg" style="align-self:center;">
-        <i class="fa fa-circle-o-notch quickSpin fa-3x fa-fw fa-stack-2x fa-inverse"></i>
-        <i id="hover" class="fa fa-github fa-inverse fa-stack-1x"></i>
-    </span>
-
-
-
-</div>
-
-<body onload="loadFunc()">
-
-
-<div id="page" style="display:none;background-color:#161619">
-<nav class="nav">
+<body style="margin-top:75px;">
+<nav class="nav" style="position:fixed;width:100%;top:0px;">
     <div id="navcolor" class="nav-left">
-        <a class="nav-item is-brand" href="../../index.html">
-            <img id="logoezskins" src="../../logo/logo.png" alt="EZSkins logo">
+        <a class="nav-item is-brand" href="../index.php">
+            <img id="logoezskins" src="../php/logo/logo.png" alt="EZSkins logo">
         </a>
     </div>
 
@@ -49,28 +50,54 @@
     </span>
 
 
-    <div id="nav-menu" class="nav-right nav-menu" style="padding-right: 20px;background-color:#222329">
-        <a id="navitemcolor1" class="nav-item is-noactive" href="../webshop/webshop.html">
+    <div id="nav-menu" class="nav-right nav-menu" style="background-color:#222329;padding:0;">
+        <?php
+
+        if (isset($_SESSION['username'])) {
+
+            $getusername = $_SESSION['username'];
+
+            echo "<a href='../php/logout.php' id=\"navitemcolor6\" class='nav-item is-noactive'>
+    </a>";
+        } else {
+            echo "<a href='../php/logout.php' id=\"navitemcolor6\" class='nav-item is-noactive'>
+    </a>";
+        }
+        ?>
+        <a id="navitemcolor1" class="nav-item is-noactive" href="../php/search2.php">
             Shop
         </a>
-        <a id="navitemcolor2" class="nav-item is-noactive" href="../news/news.html">
+        <a id="navitemcolor2" class="nav-item is-noactive" href="../news/news.php">
             News
         </a>
         <a id="navitemcolor3" class="nav-item is-noactive" href="../about/about.php">
             About
         </a>
-        <a id="navitemcolor4" class="nav-item is-noactive" href="faq.html">
+        <a id="navitemcolor4" class="nav-item is-noactive" href="../faq/faq.php">
             FAQ
         </a>
-        <a id="navitemcolor5" class="nav-item is-noactive" href="../contact/contact.html">
+        <a id="navitemcolor5" class="nav-item is-noactive" href="../contact/contact.php">
             Contact
         </a>
+
+        <script>
+            function gotoCart() {
+                window.location = "../php/add_to_cart.php";
+            }
+        </script>
+
+        <?php
+        echo "<i id='shoppingCart' onclick='gotoCart()' class=\"fa fa-shopping-cart nav-item\" aria-hidden=\"true\"></i>"
+
+
+        ?>
 
 
     </div>
 </nav>
-<div id="redline"> <!-- rood balkje onder nav -->
+<div id="redline" style="position:fixed;width:100%;z-index: 2;"> <!-- rood balkje onder nav -->
 </div>
+
 <div class="wrapper">
     <div class="animate-bottom">
     <div class="content">
@@ -123,15 +150,15 @@
                         <strong>EZSkins</strong><a style="color: white;" id="footertekst"> by Thomas Zwarts & Barry Willems. </a>
                     </p>
                     <p>
-                        <a class="icon" id="iconbot" href="../../pages/webshop/webshop.html">
+                        <a class="icon" id="iconbot" href="../php/search2.php">
                             <i class="fa fa-shopping-cart"></i></a>
-                        <a class="icon" id="iconbot" href="../../pages/news/news.html">
+                        <a class="icon" id="iconbot" href="../news/news.php">
                             <i class="fa fa-newspaper-o"></i></a>
-                        <a class="icon" id="iconbot" href="../../pages/about/about.html">
+                        <a class="icon" id="iconbot" href="../about/about.php">
                             <i class="fa fa-question-circle"></i></a>
-                        <a class="icon" id="iconbot" href="../../pages/faq/faq.html">
+                        <a class="icon" id="iconbot" href="../faq/faq.php">
                             <i class="fa fa-comment"></i></a>
-                        <a class="icon" id="iconbot" href="../../pages/contact/contact.html">
+                        <a class="icon" id="iconbot" href="../contact/contact.php">
                             <i class="fa fa-address-card-o"></i></a>
                     </p>
                 </div>

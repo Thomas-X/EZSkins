@@ -9,7 +9,6 @@
     <script src="php/js/toggleNav.js"></script>
     <script src="php/js/loadFunc.js"></script>
     <script src="php/js/button1.js"></script>
-    <link rel="stylesheet" href="php/css/search.css">
     <link rel="stylesheet" href="php/sideNav/index.css">
     <link rel="stylesheet" href="php/css/font-awesome.min.css">
     <link rel="stylesheet" href="php/css/font-awesome.css">
@@ -21,7 +20,7 @@
     <script src="php/js/loadFunc.js"></script>
     <script src="php/js/button1.js"></script>
     <script src="php/js/removeButton.js"></script>
-    <script src="php/js/gotoCart.js"></script>
+<!--    <script src="php/js/gotoCart.js"></script>-->
 
 
 
@@ -53,6 +52,7 @@
 
         <div id="nav-menu" class="nav-right nav-menu" style="background-color:#222329;padding:0;">
             <?php
+//            var_dump($_SESSION['username']);
 
             if (isset($_SESSION['username'])) {
 
@@ -68,19 +68,25 @@
             <a id="navitemcolor1" class="nav-item is-noactive" href="search2.php">
                 Shop
             </a>
-            <a id="navitemcolor2" class="nav-item is-noactive" href="news/news.html">
+            <a id="navitemcolor2" class="nav-item is-noactive" href="news/news.php">
                 News
             </a>
             <a id="navitemcolor3" class="nav-item is-noactive" href="about/about.php">
                 About
             </a>
-            <a id="navitemcolor4" class="nav-item is-noactive" href="faq/faq.html">
+            <a id="navitemcolor4" class="nav-item is-noactive" href="faq/faq.php">
                 FAQ
             </a>
-            <a id="navitemcolor5" class="nav-item is-noactive" href="contact/contact.html">
+            <a id="navitemcolor5" class="nav-item is-noactive" href="contact/contact.php">
                 Contact
             </a>
 
+            <script>
+                function gotoCart() {
+                    window.location = "php/add_to_cart.php";
+                }
+
+                </script>
             <?php
             echo "<i id='shoppingCart' onclick='gotoCart()' class=\"fa fa-shopping-cart nav-item\" aria-hidden=\"true\"></i>"
 
@@ -118,6 +124,7 @@
                 <h2 class="subtitle">
                     <div class="animate-bottom2">
                         <i>By our most loyal customers to date</i>
+                        <br><a style="color:cyan;" id="chat" href="php/chat.php">or Chat with us!</a>
                     </div>
                 </h2>
                 <div class="animate-bottom2">
@@ -294,13 +301,13 @@
                     <p>
                         <a class="icon" id="iconbot" href="search2.php">
                             <i class="fa fa-shopping-basket"></i></a>
-                        <a class="icon" id="iconbot" href="news/news.html">
+                        <a class="icon" id="iconbot" href="news/news.php">
                             <i class="fa fa-newspaper-o"></i></a>
                         <a class="icon" id="iconbot" href="about/about.php">
                             <i class="fa fa-question-circle"></i></a>
-                        <a class="icon" id="iconbot" href="faq/faq.html">
+                        <a class="icon" id="iconbot" href="faq/faq.php">
                             <i class="fa fa-comment"></i></a>
-                        <a class="icon" id="iconbot" href="contact/contact.html">
+                        <a class="icon" id="iconbot" href="contact/contact.php">
                             <i class="fa fa-address-card-o"></i></a>
                     </p>
                 </div>

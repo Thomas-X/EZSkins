@@ -220,8 +220,13 @@ html {
 
 /*FOOTER */
 
+#chat:hover {
+    text-decoration:none !important;
+}
+
 .footer {
-    background-color: rgba( 22, 22, 25, 0.9) !important;
+    background-color:black;
+    background-color: rgba( 22, 22, 25, 0.2); !important;
     color: #fffbeb;
     border-bottom-color: transparent;
 }
@@ -282,7 +287,7 @@ hr {
     -webkit-animation-duration: 0.85s;
     animation-name: animatebottom;
     animation-duration: 0.85s;
-    background-color: #161619;
+    background-color: rgba( 22, 22, 25, 0.2);
 }
 
 .animate-bottom2 {

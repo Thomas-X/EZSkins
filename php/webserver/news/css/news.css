@@ -1,4 +1,12 @@
-
+html, body {
+    height: 100%;
+    background-image: url("../../php/shopbg.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background-color: rgba( 22, 22, 25, 1);*/
+}
 
 html {
     height:100% !important;
@@ -24,7 +32,7 @@ body {
 }
 /*FOOTER */
 .footer {
-    background-color: #161619 !important;
+    background-color: rgba( 22, 22, 25, 0.2);
     /*color: #fffbeb;*/
     border-bottom-color: transparent;
 }
@@ -248,7 +256,7 @@ body {
     -webkit-animation-duration: 0.85s;
     animation-name: animatebottom;
     animation-duration: 0.85s;
-    background-color:#161619;
+    background-color: rgba( 22, 22, 25, 0.2);
 }
 
 @-webkit-keyframes animatebottom {
@@ -305,3 +313,6 @@ html {
     margin-right: 0px;
 }
 /*FOOTER ICONS*/
+hr {
+    /*background-color: rgba( 22, 22, 25, 0.2) !important;*/
+}

@@ -101,7 +101,7 @@ if (isset($_GET['remove'])) {
 <body style="margin-top:75px;">
 <nav class="nav" style="position:fixed;width:100%;top:0px;">
     <div id="navcolor" class="nav-left">
-        <a class="nav-item is-brand" href="../../index.html">
+        <a class="nav-item is-brand" href="../../index.php">
             <img id="logoezskins" src="logo/logo.png" alt="EZSkins logo">
         </a>
     </div>
@@ -136,7 +136,7 @@ if (isset($_GET['remove'])) {
     </a>";
         }
         ?>
-        <a id="navitemcolor1" class="nav-item is-noactive" href="../webshop/webshop.html">
+        <a id="navitemcolor1" class="nav-item is-noactive" href="search2.php">
             Shop
         </a>
         <a id="navitemcolor2" class="nav-item is-noactive" href="../news/news.php">
@@ -145,7 +145,7 @@ if (isset($_GET['remove'])) {
         <a id="navitemcolor3" class="nav-item is-noactive" href="../about/about.php">
             About
         </a>
-        <a id="navitemcolor4" class="nav-item is-noactive" href="faq.html">
+        <a id="navitemcolor4" class="nav-item is-noactive" href="../faq/faq.php">
             FAQ
         </a>
         <a id="navitemcolor5" class="nav-item is-noactive" href="../contact/contact.php">

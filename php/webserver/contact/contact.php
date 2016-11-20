@@ -150,7 +150,7 @@
                         </p>
                         <p>
                             <a class="icon" id="iconbot" href="../php/search2.php">
-                                <i class="fa fa-shopping-cart"></i></a>
+                                <i class="fa fa-shopping-basket"></i></a>
                             <a class="icon" id="iconbot" href="../news/news.php">
                                 <i class="fa fa-newspaper-o"></i></a>
                             <a class="icon" id="iconbot" href="../about/about.php">

@@ -65,7 +65,7 @@
     </a>";
             }
             ?>
-            <a id="navitemcolor1" class="nav-item is-noactive" href="search2.php">
+            <a id="navitemcolor1" class="nav-item is-noactive" href="php/search2.php">
                 Shop
             </a>
             <a id="navitemcolor2" class="nav-item is-noactive" href="news/news.php">
@@ -299,7 +299,7 @@
                         Willems. </a>
                     </p>
                     <p>
-                        <a class="icon" id="iconbot" href="search2.php">
+                        <a class="icon" id="iconbot" href="php/search2.php">
                             <i class="fa fa-shopping-basket"></i></a>
                         <a class="icon" id="iconbot" href="news/news.php">
                             <i class="fa fa-newspaper-o"></i></a>

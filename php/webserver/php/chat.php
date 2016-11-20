@@ -98,12 +98,19 @@ session_start();
 <div id="redline" style="position:fixed;width:100%;z-index: 2;"> <!-- rood balkje onder nav -->
 </div>
 <div class="wrapper">
-    <span style="font-size: 25px;color: #fffbeb;padding-top:20px;padding-bottom:20px;">Chat with fellow <i>NOT</i> scammed people! :)</span>
+    <?php
+
+    if (isset($_SESSION['username'])) {
+        echo '<span style="font-size: 25px;color: #fffbeb;padding-top:20px;padding-bottom:20px;">Chat with fellow <i>NOT</i> scammed people! :)</span>
     <hr>
     <form action="chat.php" method="post"><input class="input" name="userinput" placeholder="Chat here..">
         <button class="button" name="submit">Send</button>
-    </form>
-
+    </form>';
+    }
+    else {
+        echo '<span style="color: #fffbeb;font-size: 2vh;">You are not logged in, you need to be logged in to chat.</span>';
+    }
+    ?>
     <?php
 
     $connect = mysqli_connect("localhost", "root", "admin", "ezskins");
@@ -135,29 +142,29 @@ session_start();
 </div>
 <hr style="width:65%;margin:auto;">
 
-    <footer class="footer">
-        <div class="container">
-            <div class="content has-text-centered">
+<footer class="footer">
+    <div class="container">
+        <div class="content has-text-centered">
 
-                <p>
-                    <strong>EZSkins</strong><a style="color: white;" id="footertekst"> by Thomas Zwarts & Barry
-                        Willems. </a>
-                </p>
-                <p>
-                    <a class="icon" id="iconbot" href="search2.php">
-                        <i class="fa fa-shopping-basket"></i></a>
-                    <a class="icon" id="iconbot" href="../news/news.php">
-                        <i class="fa fa-newspaper-o"></i></a>
-                    <a class="icon" id="iconbot" href="../about/about.php">
-                        <i class="fa fa-question-circle"></i></a>
-                    <a class="icon" id="iconbot" href="../faq/faq.php">
-                        <i class="fa fa-comment"></i></a>
-                    <a class="icon" id="iconbot" href="../contact/contact.php">
-                        <i class="fa fa-address-card-o"></i></a>
-                </p>
-            </div>
+            <p>
+                <strong>EZSkins</strong><a style="color: white;" id="footertekst"> by Thomas Zwarts & Barry
+                    Willems. </a>
+            </p>
+            <p>
+                <a class="icon" id="iconbot" href="search2.php">
+                    <i class="fa fa-shopping-basket"></i></a>
+                <a class="icon" id="iconbot" href="../news/news.php">
+                    <i class="fa fa-newspaper-o"></i></a>
+                <a class="icon" id="iconbot" href="../about/about.php">
+                    <i class="fa fa-question-circle"></i></a>
+                <a class="icon" id="iconbot" href="../faq/faq.php">
+                    <i class="fa fa-comment"></i></a>
+                <a class="icon" id="iconbot" href="../contact/contact.php">
+                    <i class="fa fa-address-card-o"></i></a>
+            </p>
         </div>
-    </footer>
+    </div>
+</footer>
 
 </body>
 </html>

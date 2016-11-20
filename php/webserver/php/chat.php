@@ -146,13 +146,13 @@ session_start();
                 <p>
                     <a class="icon" id="iconbot" href="search2.php">
                         <i class="fa fa-shopping-basket"></i></a>
-                    <a class="icon" id="iconbot" href="news/news.php">
+                    <a class="icon" id="iconbot" href="../news/news.php">
                         <i class="fa fa-newspaper-o"></i></a>
-                    <a class="icon" id="iconbot" href="about/about.php">
+                    <a class="icon" id="iconbot" href="../about/about.php">
                         <i class="fa fa-question-circle"></i></a>
-                    <a class="icon" id="iconbot" href="faq/faq.php">
+                    <a class="icon" id="iconbot" href="../faq/faq.php">
                         <i class="fa fa-comment"></i></a>
-                    <a class="icon" id="iconbot" href="contact/contact.php">
+                    <a class="icon" id="iconbot" href="../contact/contact.php">
                         <i class="fa fa-address-card-o"></i></a>
                 </p>
             </div>

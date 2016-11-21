@@ -2,10 +2,13 @@
 include_once "lib/loginOO.php";
 include_once "lib/databaseOO.php";
 
-connect(localhost,root,admin,ezskins);
-escapelogin($_POST['username'], $_POST['password']);
-encryptpassword($_POST['password']);
-login($_POST['submit'], logindata, username, password, username, "../index.php");
+$databaseOO = new Database();
+$loginOO = new Login();
+
+$var1 = $databaseOO->connectfunc("localhost","root","admin","ezskins");
+$loginOO->escapelogin($_POST['username'], $_POST['password']);
+$loginOO->encryptpassword($_POST['password']);
+$loginOO->login('$_POST["submit"]', 'logindata', 'username', 'password', 'username', '../index.php', 'localhost', 'root', 'admin', 'ezskins');
 
 ?>
 <!DOCTYPE html>

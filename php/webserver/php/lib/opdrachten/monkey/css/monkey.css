@@ -1,0 +1,19 @@
+#monkey {
+    width:100%;
+    height:600px;
+}
+body {
+    margin:0;
+    background-color: #ffca68;
+}
+a {
+    text-decoration: none;
+    color: #624815;
+    font-family:'Bangers', cursive;
+    font-size:45px;
+    text-align:center;
+}
+a:hover {
+    text-decoration: underline;
+
+}

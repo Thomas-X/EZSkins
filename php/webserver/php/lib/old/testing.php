@@ -6,8 +6,8 @@
 </head>
 <body>
 <?php
-include_once ("Database.php");
-include_once ("opdrachten/RadioProgram.php");
+include_once("Database.php");
+include_once("opdrachten/RadioProgram.php");
 
 
 $mysqliconnect = new mysqli('localhost', 'root', 'admin', 'ezskins');
